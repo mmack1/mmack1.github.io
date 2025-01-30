@@ -52,6 +52,8 @@
       document.addEventListener("mousemove", update);
       document.addEventListener("touchmove", update);
     </script>
+
+    
   </head>
   <body style="margin-bottom: 10vh; font-family: 'Poppins', sans-serif">
     <nav
@@ -82,7 +84,16 @@
           <a class="nav-item nav-link" href="contact/contact.html">CONTACT</a>
         </div>
       </div>
+      <div class="custom-cursor"></div>
     </nav>
+    <script>
+        const cursor = document.querySelector(".custom-cursor");
+
+        document.addEventListener("mousemove", (e) => {
+            cursor.style.left = `${e.clientX}px`;
+            cursor.style.top = `${e.clientY}px`;
+        });
+    </script>
     <div class="text-container">
       <h1>Liliana Mack</h1>
       <a href="#textStart"><div class="scroll-down"></div></a>
