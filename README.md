@@ -1,1 +1,1 @@
-# mmack1.github.io
+# Liliana Mack Brown University
