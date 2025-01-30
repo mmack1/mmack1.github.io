@@ -38,20 +38,14 @@
       height: 100%;
       position: absolute;
       pointer-events: none;
+      transition: background 0.1s ease-out;
       background: radial-gradient(
-        circle 10vmax at var(--cursorX) var(--cursorY),
+        circle 20vmax at var(--cursorX) var(--cursorY),
         rgba(0, 0, 0, 0) 0%,
         rgba(0, 0, 0, 0.5) 80%,
         rgba(0, 0, 0, 0.75) 100%
       );
-      clip-path: path(
-        "M 50 15 
-        C 65 0, 100 15, 50 90 
-        C 0 15, 35 0, 50 15"
-    );
-    transform: translate(var(--cursorX), var(--cursorY));
-    transition: transform 0.05s ease-out;
-        }
+    }
   }
   
   /*Image Gallery CSS*/
