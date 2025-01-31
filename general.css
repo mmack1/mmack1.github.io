@@ -18,7 +18,7 @@ html {
     
       /* Custom Cursor Icon */
       .custom-cursor {
-        position: absolute;
+        position: fixed;
         width: 40px; /* Adjust size as needed */
         height: 40px;
         z-index: 9999;
