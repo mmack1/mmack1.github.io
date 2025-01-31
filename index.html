@@ -48,16 +48,26 @@
       document.documentElement.style.setProperty("--cursorX", x + "px");
       document.documentElement.style.setProperty("--cursorY", y + "px");
 
-      // Move custom cursor to mouse position
       const cursor = document.querySelector(".custom-cursor");
       if (cursor) {
         cursor.style.left = `${x}px`;
         cursor.style.top = `${y}px`;
-  }
-}
+      }
+    }
+    document.addEventListener("click", function(e) {
+    const cursor = document.querySelector(".custom-cursor");
+    if (cursor) {
+        cursor.classList.add("click");
+        setTimeout(() => {
+            cursor.classList.remove("click");
+        }, 100); // Time for click animation
+      }
+    });
 
-document.addEventListener("mousemove", update);
-document.addEventListener("touchmove", update);
+    document.addEventListener("mousemove", update);
+    document.addEventListener("touchmove", update);
+
+
 
     </script>
 
