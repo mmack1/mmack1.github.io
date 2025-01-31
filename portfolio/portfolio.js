@@ -1,24 +1,31 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const filterButtons = document.querySelectorAll('.filter-btn');
-    const portfolioItems = document.querySelectorAll('.portfolio-item');
+// Filter Projects
+const filterButtons = document.querySelectorAll('.filter-btn');
+const projectItems = document.querySelectorAll('.project-item');
+
+filterButtons.forEach(button => {
+  button.addEventListener('click', function() {
+    const category = this.getAttribute('data-category');
     
-    filterButtons.forEach(button => {
-      button.addEventListener('click', (e) => {
-        const filter = e.target.dataset.filter;
-        filterItems(filter);
-      });
+    projectItems.forEach(item => {
+      if (category === 'all') {
+        item.style.display = 'block';
+        item.classList.add('visible');
+      } else if (item.classList.contains(category)) {
+        item.style.display = 'block';
+        item.classList.add('visible');
+      } else {
+        item.style.display = 'none';
+        item.classList.remove('visible');
+      }
     });
-    
-    function filterItems(filter) {
-      portfolioItems.forEach(item => {
-        const itemClasses = item.className.split(' ');
-        
-        if (filter === 'all' || itemClasses.includes(filter)) {
-          item.classList.add('visible');
-        } else {
-          item.classList.remove('visible');
-        }
-      });
-    }
   });
-  
+});
+
+// Fade-in effect for projects
+document.addEventListener('DOMContentLoaded', () => {
+  setTimeout(() => {
+    projectItems.forEach(item => {
+      item.classList.add('visible');
+    });
+  }, 200); // Delay for fade-in effect
+});
