@@ -18,6 +18,9 @@ html {
         transition: transform 0.05s linear;
         will-change: transform;
       } 
+      .custom-cursor:hover {
+        transform: translate(-50%, -50%) scale(1.5); /* Cursor grows when hovered */
+      }
 }
   
   /*Scroll to top btn*/
@@ -30,7 +33,7 @@ html {
     border: none;
     outline: none;
     color: white;
-    cursor: none;
+   /*  cursor: none; */
     border-radius: 8px;
     font-size: 18px;
   
