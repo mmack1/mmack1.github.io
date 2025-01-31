@@ -3,17 +3,6 @@ html {
   }
   
   body {
-        background-image: linear-gradient(
-          180deg,
-          rgb(54, 54, 54),
-          rgb(77, 77, 77),
-          rgb(104, 103, 103),
-          rgb(156, 155, 155),
-          rgb(228, 228, 228),
-          white 100vh,
-          white,
-          white
-        );
         cursor: none !important; /* Hides default cursor */
     
       /* Custom Cursor Icon */
@@ -41,7 +30,7 @@ html {
     border: none;
     outline: none;
     color: white;
-    cursor: pointer;
+    cursor: none;
     border-radius: 8px;
     font-size: 18px;
   
