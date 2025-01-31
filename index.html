@@ -42,18 +42,29 @@
     <title>Liliana Mack</title>
     <script>
       function update(e) {
-      var x = e.clientX || e.touches[0].clientX;
-      var y = e.clientY || e.touches[0].clientY;
+      var x, y;
+      
+      if (e.clientX && e.clientY) {
+          // Mouse events (clientX and clientY are available)
+          x = e.clientX;
+          y = e.clientY;
+      } else if (e.touches && e.touches[0]) {
+          // Touch events (touches[0] exists)
+          x = e.touches[0].clientX;
+          y = e.touches[0].clientY;
+      }
 
+      // Update the cursor position
       document.documentElement.style.setProperty("--cursorX", x + "px");
       document.documentElement.style.setProperty("--cursorY", y + "px");
 
       const cursor = document.querySelector(".custom-cursor");
       if (cursor) {
-        cursor.style.left = `${x}px`;
-        cursor.style.top = `${y}px`;
+          cursor.style.left = `${x}px`;
+          cursor.style.top = `${y}px`;
       }
-    }
+     }
+
     document.addEventListener("click", function(e) {
     const cursor = document.querySelector(".custom-cursor");
     if (cursor) {
