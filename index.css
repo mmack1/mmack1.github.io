@@ -306,7 +306,8 @@
     white-space: nowrap;
     overflow: hidden;
     border-right: 2px solid black; /* Cursor effect */
-    color: white
+    color: white;
+    z-index: 1000;
   }
   
   .typing-text {
