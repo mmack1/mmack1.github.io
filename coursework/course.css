@@ -1,6 +1,6 @@
-.beginner-header { color: #ADD8E6; }
-.intermediate-header { color: #90EE90; }
-.advanced-header { color: #F08080; }
+.beginner-header { color: blue; }
+.intermediate-header { color: lightskyblue; }
+.advanced-header { color: mediumturquoise; }
 
 .skill-box {
     padding: 10px;
@@ -9,6 +9,6 @@
     border-radius: 5px;
 }
 
-.skill-box.beginner { background-color: #ADD8E6; }
-.skill-box.intermediate { background-color: #90EE90; }
-.skill-box.advanced { background-color: #F08080; }
+.skill-box.beginner { background-color: blue; }
+.skill-box.intermediate { background-color: lightskyblue; }
+.skill-box.advanced { background-color: mediumturquoise; }
