@@ -33,25 +33,37 @@ projectItems.forEach(item => {
 });
 
 
-// portfolio.js
-const bodyChildren = Array.from($0.children);
-const imgElements = bodyChildren.flatMap(child => child.tagName === 'IMG' ? [child] : Array.from(child.querySelectorAll('img')));
-const img = imgElements[0];
-if (img) {
-  await setElementStyles(img, {
-    'flex-shrink': '0',
-    'align-self': 'flex-start',
-    'min-height': 'fit-content'
-  });
-}
-
-const data = {
-  imgStyles: {
-    flexShrink: window.getComputedStyle(img)['flex-shrink'],
-    alignSelf: window.getComputedStyle(img)['align-self'],
-    minHeight: window.getComputedStyle(img)['min-height'],
-    width: window.getComputedStyle(img)['width'],
-    height: window.getComputedStyle(img)['height'],
-    boundingRect: img.getBoundingClientRect(),
+async function processImages() {
+    const bodyChildren = Array.from(document.body.children);
+    const imgElements = bodyChildren.flatMap(child => 
+      child.tagName === 'IMG' ? [child] : Array.from(child.querySelectorAll('img'))
+    );
+  
+    const img = imgElements[0];
+  
+    if (img) {
+      // Ensure setElementStyles is an async function, otherwise remove 'await'
+      await setElementStyles(img, {
+        'flex-shrink': '0',
+        'align-self': 'flex-start',
+        'min-height': 'fit-content'
+      });
+    }
+  
+    const data = {
+      imgStyles: {
+        flexShrink: window.getComputedStyle(img)['flex-shrink'],
+        alignSelf: window.getComputedStyle(img)['align-self'],
+        minHeight: window.getComputedStyle(img)['min-height'],
+        width: window.getComputedStyle(img)['width'],
+        height: window.getComputedStyle(img)['height'],
+        boundingRect: img.getBoundingClientRect(),
+      }
+    };
+  
+    console.log(data);
   }
-};
+  
+  // Call the function to execute
+  processImages();
+  
