@@ -1,0 +1,14 @@
+.beginner-header { color: #ADD8E6; }
+.intermediate-header { color: #90EE90; }
+.advanced-header { color: #F08080; }
+
+.skill-box {
+    padding: 10px;
+    margin: 5px;
+    display: inline-block;
+    border-radius: 5px;
+}
+
+.beginner { background-color: #ADD8E6; }
+.intermediate { background-color: #90EE90; }
+.advanced { background-color: #F08080; }
