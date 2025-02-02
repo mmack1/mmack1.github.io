@@ -9,6 +9,6 @@
     border-radius: 5px;
 }
 
-.beginner { background-color: #ADD8E6; }
-.intermediate { background-color: #90EE90; }
-.advanced { background-color: #F08080; }
+.skill-box.beginner { background-color: #ADD8E6; }
+.skill-box.intermediate { background-color: #90EE90; }
+.skill-box.advanced { background-color: #F08080; }
