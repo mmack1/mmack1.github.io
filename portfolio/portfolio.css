@@ -120,7 +120,7 @@ body {
     opacity: 0; /* Hide original text */
   }
   
-/* .project-item h3 {
+.project-item h3 {
     font-size: 1.2rem;
     margin-bottom: 10px;
 }
@@ -129,7 +129,7 @@ body {
     font-size: 0.9rem;
     color: #555;
     line-height: 1.5;
-} */
+}
 
 /* Responsive Design */
 @media (max-width: 768px) {
