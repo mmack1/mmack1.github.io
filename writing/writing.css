@@ -27,3 +27,10 @@
     }
   }
   
+  body {
+    height: 100vh;
+    background-image: url('pastel_vecteezy.jpg');
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    background-size: cover;
+  }
