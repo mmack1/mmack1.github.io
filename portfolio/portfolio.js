@@ -31,3 +31,27 @@ projectItems.forEach(item => {
         moreInfo.style.opacity = '0'; // Hide extra content
     });
 });
+
+
+// portfolio.js
+const bodyChildren = Array.from($0.children);
+const imgElements = bodyChildren.flatMap(child => child.tagName === 'IMG' ? [child] : Array.from(child.querySelectorAll('img')));
+const img = imgElements[0];
+if (img) {
+  await setElementStyles(img, {
+    'flex-shrink': '0',
+    'align-self': 'flex-start',
+    'min-height': 'fit-content'
+  });
+}
+
+const data = {
+  imgStyles: {
+    flexShrink: window.getComputedStyle(img)['flex-shrink'],
+    alignSelf: window.getComputedStyle(img)['align-self'],
+    minHeight: window.getComputedStyle(img)['min-height'],
+    width: window.getComputedStyle(img)['width'],
+    height: window.getComputedStyle(img)['height'],
+    boundingRect: img.getBoundingClientRect(),
+  }
+};
