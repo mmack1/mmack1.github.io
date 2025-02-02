@@ -2,9 +2,9 @@ const words = ["developer", "data scientist", "explorer", "problem solver"]; // 
 let wordIndex = 0;
 let currentWord = "";
 let currentCharIndex = 0;
-const typingSpeed = 150;
-const erasingSpeed = 100;
-const cycleDelay = 1000;
+const typingSpeed = 100;
+const erasingSpeed = 90;
+const cycleDelay = 800;
 
 const container = document.getElementById('typing-container');
 
