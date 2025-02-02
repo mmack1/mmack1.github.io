@@ -16,3 +16,18 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+// JavaScript for controlling hover behavior or additional interactivity
+const projectItems = document.querySelectorAll('.project-item');
+
+projectItems.forEach(item => {
+    item.addEventListener('mouseenter', () => {
+        const moreInfo = item.querySelector('.more-info');
+        moreInfo.style.opacity = '1'; // Show extra content
+    });
+
+    item.addEventListener('mouseleave', () => {
+        const moreInfo = item.querySelector('.more-info');
+        moreInfo.style.opacity = '0'; // Hide extra content
+    });
+});
