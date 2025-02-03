@@ -138,7 +138,7 @@ function insertPoemIntoDivs() {
 // Call the function when the DOM is fully loaded
 document.addEventListener("DOMContentLoaded", insertPoemIntoDivs);
 
-const contentDiv = document.querySelector(".content");
+const contentDiv = document.querySelector(".con");
 function adjustContentSize() {
 	const viewportWidth = window.innerWidth;
 	const baseWidth = 1000;
