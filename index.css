@@ -83,12 +83,9 @@
     text-transform: uppercase;
     font-weight: 900;
     margin-bottom: 100px;
+    gap: 20px;
     
   }
-
-  .typing-wrapper {
-    padding-top: 20px; /* Adds separation */
-}
 
   
   @keyframes animate {
