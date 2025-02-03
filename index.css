@@ -301,11 +301,11 @@
   z-index: 1000;
   margin-top: 80px; 
   overflow: visible;
-  display: inline-block  /*this was not here*/
+  display: inline-block
 }
 
 .typing-text {
-  display: block; /*this was block*/
+  display: block;
   animation: typing 2s steps(20) 1s 1 normal both, blink 0.7s step-end infinite alternate;
   color: white;
 }

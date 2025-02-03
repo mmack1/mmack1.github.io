@@ -7,6 +7,7 @@ let currentCharIndex = 0;
 const typingSpeed = 100;
 const erasingSpeed = 90;
 const cycleDelay = 800;
+const noDelay = 10;
 
 const container = document.getElementById('typing-container');
 
@@ -29,7 +30,7 @@ function erase() {
     setTimeout(erase, erasingSpeed);
   } else {
     wordIndex = (wordIndex + 1) % words.length; // Move to the next word
-    setTimeout(type, cycleDelay); // Wait before starting to type next word
+    setTimeout(type, noDelay); // Wait before starting to type next word
   }
 }
 
