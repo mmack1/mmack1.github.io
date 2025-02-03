@@ -296,7 +296,7 @@
     font-family: 'Poppins', sans-serif;
     display: inline-block;
     white-space: nowrap;
-    place-content: center;
+    /* place-content: center; */
     overflow: hidden;
     border-right: 2px solid black; /* Cursor effect */
     color: white;
@@ -306,7 +306,7 @@
   .typing-text {
     display: inline-block;
     animation: typing 2s steps(20) 1s 1 normal both, blink 0.7s step-end infinite alternate;
-    place-content: center;
+    /* place-content: center; */
   }
   
   @keyframes typing {
@@ -323,12 +323,5 @@
       border-color: transparent;
     }
   }
-/* test */
-  .text-container {
-    background: transparent; /* Just to see if it's actually being rendered */
-    /* min-height: 100px; /* Ensure it has some height */
-    display: block; 
-    text-align: center;
-}
 
   
