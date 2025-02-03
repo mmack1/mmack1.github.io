@@ -30,6 +30,6 @@ function erase() {
     setTimeout(type, cycleDelay); // Wait before starting to type next word
   }
 }
-
+console.log("Script loaded!");
 // Initial typing sequence
 setTimeout(type, cycleDelay);
