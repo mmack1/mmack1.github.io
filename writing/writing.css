@@ -235,7 +235,7 @@ h2 {
 }
 .boyImage {
 	position: absolute;
-	width: 500px;
+	width: 200px;
 	z-index: 2;
 	animation: 200s linear infinite blur;
 }
