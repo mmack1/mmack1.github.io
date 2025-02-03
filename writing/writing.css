@@ -61,17 +61,18 @@
     
   .td {
       color:#888;
-      font-size: 10px;
+      font-size: 20px;
       letter-spacing: 0.2em;
       border: 2px solid grey;
       transition: color 333ms ease-in-out;
+      padding-left: 25px;
       
-      &:first-child {padding-left:25px;}
+/*       &:first-child {padding-left:25px;}
   
       &:last-child {
         padding-right:25px;
         text-align: right;
-      }
+      } */
     }
   }
   
