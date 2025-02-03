@@ -111,12 +111,11 @@ th {
 }
 
 
-.content {
+/* .side-quests {
   width: 100%;
   display: flex;
-  flex-direction: column;
 }
-
+ */
 /* Scrollable Sections */
 .scroll-section {
   width: 100%;
@@ -190,7 +189,6 @@ h2 {
 
 .side-quests-landing p {
   font-size: 1.5rem;
-  max-width: 600px;
   line-height: 1.4;
   opacity: 0.8;
 }
