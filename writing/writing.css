@@ -2,9 +2,9 @@ body {
     height: 100vh;
     background-image: url('../images/pastel_vecteezy.jpg');
     background-repeat: no-repeat;
-    background-color: #b6d8f6;
+    background-color: #12314c;
     /* background-position: bottom left; */
-    background-position: sticky;
+    /* background-position: sticky; */
     background-size: cover;
 }
 
