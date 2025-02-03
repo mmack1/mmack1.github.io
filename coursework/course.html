@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="general.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coursework</title>
+
 </head>
 <body>
 
@@ -18,6 +19,9 @@
             <span class="arrow">▶</span>
         </div>
         <div class="course-content">
+          <!--   <p>✔ Introduction to HTML & Semantic Elements</p>
+            <p>✔ Forms, Tables, and Accessibility</p>
+            <p>✔ Advanced HTML5 Features</p> -->
             <p>CSCI 0150 - Intro to Programming/Comp Sci</p>
             <p>CSCI 0160 - Intro Algorithms/Data Structures</p>
             <p>CSCI 0220 - Discrete Structures/Probability</p>
@@ -30,6 +34,7 @@
             <p>CSCI 1951Z - Fairness in Automated Decision</p>
             <p>CSCI 1970 - Individual Independent Study</p>
             <p>ENGN 0930C - Design Studio</p>
+
         </div>
     </div>
 
@@ -49,7 +54,11 @@
             <p>APMA 1710 - Information Theory</p>
             <p>APMA 1910 - Race & Gender in the Sciences</p>
             <p>APMA BIO 1810 21st Century Applications in Biology</p>
-            <p>BIOL 0510 - Introductory Microbiology</p>
+            <p>BIOL 0510 Introductory Microbiology</p>
+
+            <!-- <p>✔ CSS Grid & Flexbox</p>
+            <p>✔ Responsive Web Design</p>
+            <p>✔ Animations & Transitions</p> -->
         </div>
     </div>
 
@@ -71,10 +80,14 @@
             <p>ETHN 1750L - Latina Feminisms</p>
             <p>ETHN 1910 - Independent Study</p>
             <p>ETHN 1900E - Senior Seminar in Ethnic Studies</p>
-            <p>POLS 1200 - Reimagining Capitalism</p>
-            <p>BIOL 0940A - Viral Epidemics</p>
-            <p>ENGL 0200T - Poetry and Politics of Representation</p>
-            <p>GISP 0005 - Intro to Migration Studies</p>
+            <p>POLS 1200 Reimagining Capitalism</p>
+            <p>BIOL 0940A Viral Epidemics</p>
+            <p>ENGL 0200T Poetry and Politics of Representation</p>
+            <p>GISP 0005 Intro to Migration Studies</p>
+
+            <!-- <p>✔ ES6+ Features</p>
+            <p>✔ Asynchronous Programming & APIs</p>
+            <p>✔ DOM Manipulation</p> -->
         </div>
     </div>
 
@@ -91,6 +104,36 @@
             <div class="skill-box advanced">PyTorch</div>
             <div class="skill-box advanced">R</div>
             <div class="skill-box advanced">SQL</div>
+            <div class="skill-box advanced">Supervised Learning</div>
+            <div class="skill-box advanced">Unsupervised Learning</div>
+            <div class="skill-box advanced">Model Evaluation</div>
+            <div class="skill-box advanced">Neural Networks</div>
+            <div class="skill-box advanced">Transformers</div>
+            <div class="skill-box advanced">CNNs</div>
+            <div class="skill-box advanced">RNNs</div>
+            <div class="skill-box advanced">Matplotlib</div>
+            <div class="skill-box advanced">Seaborn</div>
+
+            <h3 class="intermediate-header">Intermediate</h3>
+            <div class="skill-box intermediate">Feature Engineering</div>
+            <div class="skill-box intermediate">React</div>
+            <div class="skill-box intermediate">Node.js</div>
+            <div class="skill-box intermediate">HTML</div>
+            <div class="skill-box intermediate">CSS</div>
+            <div class="skill-box intermediate">JavaScript</div>
+            <div class="skill-box intermediate">GANs</div>
+            <div class="skill-box intermediate">Spark</div>
+            <div class="skill-box intermediate">NoSQL</div>
+
+            <h3 class="beginner-header">Beginner</h3>
+            <div class="skill-box beginner">Tableau</div>
+            <div class="skill-box beginner">Git</div>
+            <div class="skill-box beginner">C++</div>
+
+   
+
+
+
         </div>
     </div>
 
@@ -99,13 +142,14 @@
             const content = element.querySelector('.course-content');
             const arrow = element.querySelector('.arrow');
 
+            // Toggle visibility and arrow rotation
             if (content.style.display === "block") {
                 content.style.display = "none";
                 element.classList.remove("expanded");
             } else {
                 content.style.display = "block";
                 element.classList.add("expanded");
-            }
+            }a
         }
     </script>
 

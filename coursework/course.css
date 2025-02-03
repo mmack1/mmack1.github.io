@@ -1,25 +1,25 @@
-.beginner-header { color: #006DB5 }
-.intermediate-header { color: blue; }
-.advanced-header { color: #003E7F; }
+        .beginner-header { color: #006DB5 }
+        .intermediate-header { color: blue; }
+        .advanced-header { color: #003E7F; }
 
-.skill-box {
-    padding: 10px;
-    margin: 5px;
-    display: inline-block;
-    border-radius: 5px;
-}
+        .skill-box {
+            padding: 10px;
+            margin: 5px;
+            display: inline-block;
+            border-radius: 5px;
+        }
 
-.skill-box.advanced { background-color: #003E7F;; }
-.skill-box.beginner { background-color: #006DB5; }
-.skill-box.intermediate { background-color: blue; }
+        .skill-box.advanced { background-color: #003E7F;; }
+        .skill-box.beginner { background-color: #006DB5; }
+        .skill-box.intermediate { background-color: blue; }
 
-body {
+        body {
             font-family: Arial, sans-serif;
             background: #f8f9fa;
             padding: 20px;
-}
+        }
 
-.course-section {
+        .course-section {
             background: white;
             margin: 10px 0;
             padding: 15px;
@@ -27,16 +27,16 @@ body {
             box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
             cursor: pointer;
             transition: 0.3s;
-}
+        }
 
 
-body {
+        body {
             font-family: Arial, sans-serif;
             background: #f8f9fa;
             padding: 20px;
-}
+        }
         
-.course-section {
+        .course-section {
             background: white;
             margin: 10px 0;
             padding: 15px;
@@ -44,20 +44,25 @@ body {
             box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
             cursor: pointer;
             transition: 0.3s;
-}
+        }
         
-.course-header {
+        .course-header {
             display: flex;
             justify-content: space-between;
             align-items: center;
             font-size: 18px;
             font-weight: bold;
-}
-.arrow {transition: transform 0.3s ease;}
+        }
         
-.expanded .arrow {transform: rotate(90deg);}
-
-.course-content {
+        .arrow {
+            transition: transform 0.3s ease;
+        }
+        
+        .expanded .arrow {
+            transform: rotate(90deg);
+        }
+        
+        .course-content {
             display: none;
             padding: 10px 0;
             border-top: 1px solid #ddd;
