@@ -293,15 +293,17 @@
   #typing-container {
     font-size: 24px;
     font-family: 'Poppins', sans-serif;
-    display: inline-block;
-    white-space: nowrap;
+    /* display: inline-block; */
+    /* white-space: nowrap; */
     overflow: hidden;
     border-right: 2px solid black; /* Cursor effect */
+    z-index: 1000;
   }
   
   .typing-text {
     display: inline-block;
     animation: typing 2s steps(20) 1s 1 normal both, blink 0.7s step-end infinite alternate;
+    color: white;
     /* place-content: center; */
   }
   
