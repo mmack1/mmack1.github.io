@@ -73,7 +73,7 @@
   .text-container h1 {
     font-size: 150px;
     color: rgba(241, 233, 151, 0.01);
-    background-image: url('/images/pawel-czerwinski-8uZPynIu-rQ-unsplash.jpg');
+    background-image: url('../images/pawel-czerwinski-8uZPynIu-rQ-unsplash.jpg');
     background-repeat: repeat;
     -webkit-background-clip: text;
     animation: animate 15s ease-in-out infinite;
