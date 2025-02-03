@@ -12,9 +12,6 @@
     }
   }
 
-  body {
-    background-color: lavender;
-  }
 
 
   @media only screen and (min-width: 820px) {
@@ -72,6 +69,7 @@
       align-items: center;
       position: relative;
       z-index: 1000;
+      gap: 20px;
     }
     
   .text-container h1 {
@@ -84,9 +82,14 @@
     text-align: center;
     text-transform: uppercase;
     font-weight: 900;
-    margin-bottom: 200px;
+    margin-bottom: 100px;
     
   }
+
+  .typing-wrapper {
+    padding-top: 20px; /* Adds separation */
+}
+
   
   @keyframes animate {
     0%,
