@@ -69,7 +69,6 @@
     align-items: center;
     position: relative;
     z-index: 1000;
-    /* gap: 100px; */
   }
   
 .text-container h1 {
@@ -82,10 +81,7 @@
   text-align: center;
   text-transform: uppercase;
   font-weight: 900;
-  position: static;
-  /* margin-bottom: 100px; */
-  /* gap: 40px; */
-  
+  position: fixed;
 }
 
 
