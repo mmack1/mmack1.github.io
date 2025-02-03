@@ -193,6 +193,13 @@ h2 {
   max-width: 600px;
   line-height: 1.4;
   opacity: 0.8;
+  overflow: visible;
+}
+
+.scroll-section p {
+  font-size: 1.5rem;
+  max-width: 600px;
+  line-height: 1.4;
 }
 
 /*inspo taken from https://codepen.io/alexandrevacassin/pen/jENEZZq*/
@@ -284,7 +291,7 @@ h2 {
 	width: 870px;
 	height: 870px;
 }
-.p {
+p {
 	white-space: nowrap;
 	overflow: hidden;
 	font-family: "Bebas Neue", sans-serif;
