@@ -1,40 +1,10 @@
-#typing-container {
-    font-size: 24px;
-    font-family: 'Poppins', sans-serif;
-    display: inline-block;
-    position: flex;
-    white-space: pre;
-    overflow: visible;
-    border-right: 2px solid black; /* Cursor effect */
-  }
-  
-  .typing-text {
-    display: inline-block;
-    animation: typing 2s steps(20) 1s 1 normal both, blink 0.7s step-end infinite alternate;
-  }
-  
-  @keyframes typing {
-    0% {
-      width: 0;
-    }
-    100% {
-      width: 100%;
-    }
-  }
-  
-  @keyframes blink {
-    50% {
-      border-color: transparent;
-    }
-  }
-  
-  body {
+body {
     height: 100vh;
     background-image: url('../images/pastel_vecteezy.jpg');
     background-repeat: no-repeat;
     background-position: bottom left;
     background-size: cover;
-  }
+}
 
  /* Table styling */
 table {
@@ -111,11 +81,11 @@ th {
 }
 
 
-/* .side-quests {
+.side-quests {
   width: 100%;
   display: flex;
 }
- */
+
 /* Scrollable Sections */
 .scroll-section {
   width: 100%;
