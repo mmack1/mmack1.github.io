@@ -299,13 +299,14 @@
     font-size: 25px;
     font-family: 'Poppins', sans-serif;
     position: flex;
+    display: inline-block;
+    white-space: nowrap;
     flex-direction: horizontal;
     border-right: 2px solid black; /* Cursor effect */
     z-index: 1000;
-    margin-top: 50px; 
-    font-family: 'Poppins', sans-serif;
+    margin-top: 80px; 
+    overflow: hidden;
 }
-
   
   .typing-text {
     display: inline-block;
