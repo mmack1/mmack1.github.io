@@ -48,7 +48,7 @@
   table {
     width:80%;
     border-collapse: collapse;
-    transition: color 333ms ease-in-out;
+    transition: 333ms ease-in-out;
     align-items: center;
   }
   
@@ -74,7 +74,7 @@
       font-size: 20px;
       letter-spacing: 0.2em;
       border: 2px solid grey;
-      transition: color 333ms ease-in-out;
+      transition: 333ms ease-in-out;
       
       &:first-child {padding-left:25px;}
     }
@@ -84,4 +84,5 @@
   .th {
     background:#666;
     color:#eee;
+    transition: 333ms ease-in-out;
   }
