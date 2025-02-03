@@ -153,3 +153,19 @@ th {
 h2 {
   transition: transform 0.5s ease-in-out;
 }
+
+
+/* Navbar */
+.navbar {
+  background-color: #ffffff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 10px 20px;
+}
+.navbar-nav .nav-link {
+  font-weight: 500;
+  color: #333;
+  transition: color 0.3s ease;
+}
+.navbar-nav .nav-link:hover {
+  color: #007bff;
+}
