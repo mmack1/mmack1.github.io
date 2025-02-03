@@ -38,7 +38,7 @@ fetch("https://script.google.com/macros/s/AKfycbwvxFd7w_Mg6sH88jtrS4jSCtnNqkk_qN
       redirect: "follow",
       method: "GET",
       headers: {
-        "Content-Type": "application/json", // Set correct content-type for JSON
+        "Content-Type": "text/plain", // Set correct content-type for JSON
       }, })
   .then(response => response.json())  // Parse response to JSON
   .then(data => {
