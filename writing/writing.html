@@ -40,13 +40,6 @@ fetch("https://script.google.com/macros/s/AKfycbwvxFd7w_Mg6sH88jtrS4jSCtnNqkk_qN
       method: "POST",
       headers: {
         "Content-Type": "text/plain;charset=utf-8",}, })
-
-  .then(response => {
-      if (!response.ok) {
-          throw new Error(`HTTP error! Status: ${response.status}`);
-      }
-      return response.json();
-  })
   .then(data => {
       let tableHead = document.getElementById("header-row");
       let tbody = document.querySelector("#sheet-data tbody");
