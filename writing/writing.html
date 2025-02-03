@@ -42,6 +42,7 @@ fetch("https://script.google.com/macros/s/AKfycbwvxFd7w_Mg6sH88jtrS4jSCtnNqkk_qN
         "Content-Type": "text/plain;charset=utf-8",}, })
   .then(data => {
       let tableHead = document.getElementById("header-row");
+      console.log(tableHead)
       let tbody = document.querySelector("#sheet-data tbody");
 
       // ✅ Clear previous content (avoids duplication)
