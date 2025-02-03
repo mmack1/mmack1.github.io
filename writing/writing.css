@@ -49,11 +49,11 @@
     width:80%;
     border-collapse: collapse;
     transition: color 333ms ease-in-out;
+    align-items: center;
   }
   
   .tr {
     height:50px;
-    transition: background 333ms ease-in-out;
     
     &:nth-child(even) {background: #e6f0f6;}
   
@@ -75,14 +75,8 @@
       letter-spacing: 0.2em;
       border: 2px solid grey;
       transition: color 333ms ease-in-out;
-      padding-left: 25px;
       
-/*       &:first-child {padding-left:25px;}
-  
-      &:last-child {
-        padding-right:25px;
-        text-align: right;
-      } */
+      &:first-child {padding-left:25px;}
     }
   }
   
@@ -90,5 +84,4 @@
   .th {
     background:#666;
     color:#eee;
-    transition: color 333ms ease-in-out;
   }
