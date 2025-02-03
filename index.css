@@ -294,12 +294,20 @@
   #typing-container {
     font-size: 24px;
     font-family: 'Poppins', sans-serif;
-    /* display: inline-block; */
-    /* white-space: nowrap; */
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     overflow: hidden;
     border-right: 2px solid black; /* Cursor effect */
     z-index: 1000;
-  }
+}
+
   
   .typing-text {
     display: inline-block;
