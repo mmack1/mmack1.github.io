@@ -67,7 +67,7 @@
       height: 100vh;
       width: 100%;
       display: flex;
-      flex-direction: column;
+      /* flex-direction: column; */
       justify-content: center;
       align-items: center;
       position: relative;
@@ -84,7 +84,7 @@
     text-align: center;
     text-transform: uppercase;
     font-weight: 900;
-    margin-bottom: 150px;
+    margin-bottom: 200px;
     
   }
   
@@ -316,7 +316,7 @@
     display: inline-block;
     animation: typing 2s steps(20) 1s 1 normal both, blink 0.7s step-end infinite alternate;
     color: white;
-    /* place-content: center; */
+    place-content: center;
   }
   
   @keyframes typing {
