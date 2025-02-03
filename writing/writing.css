@@ -38,9 +38,10 @@
   table {
     width:80%;
     border-collapse: collapse;
+    transition: color 333ms ease-in-out;
   }
   
-  tr {
+  .tr {
     height:50px;
     transition: background 333ms ease-in-out;
     
@@ -58,7 +59,7 @@
       a {color:#666;}
     }
     
-  td {
+  .td {
       color:#888;
       font-size: 10px;
       letter-spacing: 0.2em;
@@ -75,7 +76,8 @@
   }
   
   /* Top Bar */
-  th {
+  .th {
     background:#666;
     color:#eee;
+    transition: color 333ms ease-in-out;
   }
