@@ -319,4 +319,11 @@
       border-color: transparent;
     }
   }
+/* test */
+  .text-container {
+    background: red; /* Just to see if it's actually being rendered */
+    min-height: 100px; /* Ensure it has some height */
+    display: block; /* Ensure it's visible */
+}
+
   
