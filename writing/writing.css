@@ -225,6 +225,8 @@ h2 {
 	justify-content: center;
   padding-top: 20px;
   background-color: #12314c;
+  height: 100vh;
+  
 }
 .container-full,
 .face {
