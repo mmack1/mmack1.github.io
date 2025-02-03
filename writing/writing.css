@@ -223,6 +223,7 @@ h2 {
 .container {
 	justify-content: center;
   padding-top: 20px;
+  background-color: #12314c;
 }
 .container-full,
 .face {
