@@ -32,6 +32,12 @@ function erase() {
     setTimeout(type, cycleDelay); // Wait before starting to type next word
   }
 }
+
+document.addEventListener("mousemove", (e) => {
+  document.documentElement.style.setProperty("--cursorX", `${e.clientX}px`);
+  document.documentElement.style.setProperty("--cursorY", `${e.clientY}px`);
+});
+
 console.log("Script loaded!");
 // Initial typing sequence
 setTimeout(type, cycleDelay);
