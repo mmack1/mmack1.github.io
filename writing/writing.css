@@ -1,7 +1,7 @@
 body {
     height: 100vh;
     background-image: url('../images/pastel_vecteezy.jpg');
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     background-position: bottom left;
     background-size: cover;
 }
@@ -366,22 +366,6 @@ span {
 		filter: hue-rotate(100deg);
 	}
 }
-/* @keyframes zoom-in {
-	0% {
-		transform: scale(1);
-	}
-	100% {
-		transform: scale(2.5);
-	}
-} */
-/* @keyframes blur {
-	0% {
-		filter: blur(0px);
-	}
-	100% {
-		filter: blur(3px);
-	}
-} */
 @keyframes brightness {
 	0% {
 		filter: brightness(1) contrast(1);
