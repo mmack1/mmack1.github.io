@@ -67,8 +67,11 @@ fetch("https://script.google.com/macros/s/AKfycbwvxFd7w_Mg6sH88jtrS4jSCtnNqkk_qN
               let td = document.createElement("td");
               td.textContent = cell;
               tr.appendChild(td);
+              
           });
           tbody.appendChild(tr);
+          console.log("split");
+          console.log(tr);
       });
         // Add class to trigger opacity transition
   document.querySelector('table').classList.add('loaded');
