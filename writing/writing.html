@@ -22,7 +22,7 @@
 
  <table id="sheet-data">
   <thead>
-      <tr>
+      <tr id="header-row">
           <th>Article</th>
           <th>Author</th>
           <th>Access</th>
@@ -32,37 +32,50 @@
   <tbody></tbody>
 </table>
 
+
 <script>
 fetch("https://script.google.com/macros/s/AKfycbwo6wTfGjR8Gm-MpAC6FTlwV1TaK_7d6vdi314uVfWs62C9zbDg-I54wuGpyO1AIqbl/exec")
-  .then(response => response.json())
-  .then(data => {
-      let tbody = document.querySelector("#sheet-data tbody");
-      data.forEach(row => {
-          let tr = document.createElement("tr");
-          row.forEach(cell => {
-              let td = document.createElement("td");
-              td.textContent = cell;
-              tr.appendChild(td);
-          });
-          tbody.appendChild(tr);
-      });
-  });
+.then(response => response.json())
+.then(data => {
+    let tableHead = document.getElementById("header-row");
+    let tbody = document.querySelector("#sheet-data tbody");
+
+    // Add header row
+    data[0].forEach(header => {
+        let th = document.createElement("th");
+        th.textContent = header;
+        tableHead.appendChild(th);
+    });
+
+    // Add table rows
+    data.slice(1).forEach(row => {
+        let tr = document.createElement("tr");
+        row.forEach(cell => {
+            let td = document.createElement("td");
+            td.textContent = cell;
+            tr.appendChild(td);
+        });
+        tbody.appendChild(tr);
+    });
+})
+.catch(error => console.error("Error:", error));
 </script>
 
 <style>
-#sheet-data {
+table {
   width: 100%;
   border-collapse: collapse;
   font-family: Arial, sans-serif;
 }
-#sheet-data th, #sheet-data td {
+th, td {
   border: 1px solid #ddd;
   padding: 8px;
 }
-#sheet-data th {
+th {
   background-color: #4CAF50;
   color: white;
 }
 </style>
+
 
 </html>
