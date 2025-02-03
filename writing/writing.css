@@ -3,7 +3,8 @@ body {
     background-image: url('../images/pastel_vecteezy.jpg');
     background-repeat: no-repeat;
     background-color: #b6d8f6;
-    background-position: bottom left;
+    /* background-position: bottom left; */
+    background-position: sticky;
     background-size: cover;
 }
 
