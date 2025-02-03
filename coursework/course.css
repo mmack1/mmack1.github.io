@@ -15,7 +15,8 @@
 
         body {
             font-family: Arial, sans-serif;
-            background: #f8f9fa;
+            background-image: url('../images/vecteezy_pastel-pink-background_1269134.jpg');
+            background-repeat: no-repeat;
             padding: 20px;
         }
 
