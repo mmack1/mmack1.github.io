@@ -10,12 +10,59 @@
     <script src="writing.js"></script>
   </body>
   
+  <!-- 
   <iframe 
   src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSYzWgXlQ8M_qa2SJ7vOD2bUZqUVi3YH0UkH1l2_fF09YHg4m7A5izVKyCtPybaQtPWMobcb8b278og/pubhtml?gid=0&single=true?widget=true&amp;headers=false"
+  title="Readings I enjoy"
   width="100%" 
-  height="500px" 
-  style="border: none;">
+  height="600px" 
+  style="border: none; border-radius: 10px;"">
 </iframe>
+ -->
 
+ <table id="sheet-data">
+  <thead>
+      <tr>
+          <th>Article</th>
+          <th>Author</th>
+          <th>Access</th>
+          <th>Rating</th>
+      </tr>
+  </thead>
+  <tbody></tbody>
+</table>
+
+<script>
+fetch("https://script.google.com/macros/s/AKfycbwo6wTfGjR8Gm-MpAC6FTlwV1TaK_7d6vdi314uVfWs62C9zbDg-I54wuGpyO1AIqbl/exec")
+  .then(response => response.json())
+  .then(data => {
+      let tbody = document.querySelector("#sheet-data tbody");
+      data.forEach(row => {
+          let tr = document.createElement("tr");
+          row.forEach(cell => {
+              let td = document.createElement("td");
+              td.textContent = cell;
+              tr.appendChild(td);
+          });
+          tbody.appendChild(tr);
+      });
+  });
+</script>
+
+<style>
+#sheet-data {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: Arial, sans-serif;
+}
+#sheet-data th, #sheet-data td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+#sheet-data th {
+  background-color: #4CAF50;
+  color: white;
+}
+</style>
 
 </html>
