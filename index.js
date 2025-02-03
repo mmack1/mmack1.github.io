@@ -1,4 +1,6 @@
-const words = ["developer", "data scientist", "explorer", "problem solver"]; // List of words
+const words = ["developer", "data scientist", 
+"explorer", "problem solver", "human-centered technologist",
+"computational ethnographer", "machine learning engineer", "empathy-driven designer", "ethical AI advocate"]; // List of words
 let wordIndex = 0;
 let currentWord = "";
 let currentCharIndex = 0;
