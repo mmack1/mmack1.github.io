@@ -219,6 +219,7 @@ h2 {
 }
 .container {
 	justify-content: center;
+  padding-top: 20px;
 }
 .container-full,
 .face {
