@@ -4,7 +4,6 @@
     display: inline-block;
     justify-content: center; /* Centers horizontally */
     align-items: center; /* Centers vertically */
-    height: 100vh; /* Full viewport height */
     text-align: center; /* Ensures text is centered */
     white-space: nowrap;
     overflow: hidden;
