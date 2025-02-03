@@ -34,7 +34,13 @@
 
 
 <script>
-fetch("https://script.google.com/macros/s/AKfycbx6kJSYZSwL6cniauyN-fVbbEzvwtHeY8mNDPwrVYPNzasFdSiL37Y-wV1VXkOakazG/exec")
+fetch("https://script.google.com/macros/s/AKfycbx6kJSYZSwL6cniauyN-fVbbEzvwtHeY8mNDPwrVYPNzasFdSiL37Y-wV1VXkOakazG/exec", {
+      redirect: "follow",
+      method: "POST",
+      body: JSON.stringify(DATA),
+      headers: {
+        "Content-Type": "text/plain;charset=utf-8",}, })
+
   .then(response => {
       if (!response.ok) {
           throw new Error(`HTTP error! Status: ${response.status}`);
