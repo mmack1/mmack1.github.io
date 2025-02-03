@@ -59,16 +59,15 @@
   }
   
   /* CSS background inspired from alvarotrigo */
-  .text-container {
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    /* justify-content: center;
-    align-items: center; */
-    /* position: relative; */
-    z-index: 1000;
-    background: transparent;
-  }
+    .text-container {
+      height: 100vh;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      z-index: 1000;
+    }
     
   .text-container h1 {
     font-size: 150px;
@@ -292,15 +291,12 @@
   }
   
   #typing-container {
-    font-size: 50px;
+    font-size: 24px;
     font-family: 'Poppins', sans-serif;
     display: inline-block;
     white-space: nowrap;
-    /* place-content: center; */
     overflow: hidden;
     border-right: 2px solid black; /* Cursor effect */
-    color: white;
-    /* z-index: 1000; */
   }
   
   .typing-text {
