@@ -235,9 +235,7 @@ body {
 }
 .boyImage {
 	position: absolute;
-	/* width: 1000px; */
-  width: 300px;
-  height: 200px; /* Adjust the height as needed */
+	width: 1000px;
 	z-index: 2;
 	animation: 200s linear infinite blur;
 }
