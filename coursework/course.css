@@ -17,7 +17,7 @@
             font-family: Arial, sans-serif;
             background-image: url('../images/gradient_01.jpg');
             background-repeat: no-repeat;
-            padding: 20px;
+            /* padding: 20px; */
         }
 
         .course-section {
