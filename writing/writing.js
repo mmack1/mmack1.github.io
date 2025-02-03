@@ -33,3 +33,16 @@ function erase() {
 
 // Initial typing sequence
 setTimeout(type, cycleDelay);
+
+// JavaScript to handle fade-in effect on scroll
+window.addEventListener('scroll', function () {
+  const sections = document.querySelectorAll('.scroll-section');
+  const scrollPosition = window.scrollY + window.innerHeight;
+
+  sections.forEach(function (section) {
+    if (scrollPosition > section.offsetTop) {
+      section.classList.add('visible'); // Add the class to make it visible
+    }
+  });
+});
+

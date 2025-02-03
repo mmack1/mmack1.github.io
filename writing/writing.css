@@ -108,3 +108,47 @@ tr:nth-child(odd) {
 th {
   font-size: 16px;
 }
+
+
+.content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Scrollable Sections */
+.scroll-section {
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+  padding: 20px;
+  box-sizing: border-box;
+  opacity: 0; /* Initially hidden */
+  transition: opacity 1s ease-in-out;
+}
+
+
+#projects {
+  background-color: #b6d8f6;
+}
+
+#experience {
+  background-color: #44b1e4;
+}
+
+#articles {
+  background-color: #b6d8f6;
+}
+
+#art {
+  background-color: #44b1e4;
+}
+
+/* Fade-in effect when scrolling */
+.scroll-section.visible {
+  opacity: 1;
+}
+
+/* Add simple transitions to the h2 for smoother entry */
+h2 {
+  transition: transform 0.5s ease-in-out;
+}
