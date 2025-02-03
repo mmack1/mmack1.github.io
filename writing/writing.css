@@ -199,20 +199,20 @@ h2 {
 
 @import url(https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap);
 .card,
-.content,
-body {
+.content {
 	overflow: hidden;
 }
-body {
+/* body {
 	width: 100vw;
 	height: 100vh;
 	padding: 0;
 	margin: 0;
 	display: flex;
+  flex-direction: column;
 	align-items: center;
 	justify-content: center;
 	background: black;
-}
+} */
 .card,
 .container {
 	display: flex;
@@ -235,7 +235,7 @@ body {
 }
 .boyImage {
 	position: absolute;
-	width: 1000px;
+	width: 500px;
 	z-index: 2;
 	animation: 200s linear infinite blur;
 }
