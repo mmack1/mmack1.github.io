@@ -42,9 +42,7 @@
   }
   *{padding:0;margin:0;}
   
-  
-  $width:75%;
-  $margin:(100% - $width) / 2;
+
   
 /*   h1 {
     margin-top:50px;
@@ -58,10 +56,9 @@
   
   td {transition: color 333ms ease-in-out;}
   
-  
-  .table, .footer, .output {
-    width:75%;
-    margin:(100% - 75%) / 2;
+  table {
+    width:100%;
+    border-collapse: collapse;
   }
   
   tr {
@@ -87,6 +84,7 @@
       font-size: 0.78em;
       font-weight: 300;
       letter-spacing: 0.2em;
+      border: 5px solid grey;
       
       &:first-child {padding-left:25px;}
   
@@ -98,15 +96,7 @@
   }
   
   /* Top Bar */
-  tr:first-child {
+  th {
     background:#666;
-    
-    td {
-      color:#eee;
-      font-size:0.75em;
-      letter-spacing: 0.3em;
-    }
+    color:#eee;
   }
-  
-  tr:first-child, 
-  tr:first-child td {transition: none;}
