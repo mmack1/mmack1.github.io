@@ -80,6 +80,8 @@
     text-transform: uppercase;
     font-weight: 900;
     margin-bottom: 150px;
+    display: block;
+    
   }
   
   @keyframes animate {
@@ -325,7 +327,7 @@
   .text-container {
     background: transparent; /* Just to see if it's actually being rendered */
     /* min-height: 100px; /* Ensure it has some height */
-    display: block;
+    /* display: block; */
     place-content: center;
     text-align: center;
 }
