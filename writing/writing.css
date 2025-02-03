@@ -262,7 +262,7 @@ h2 {
 	margin: 0;
 	justify-content: center;
 	transform: scale(1);
-	animation: 200s linear infinite zoom-in;
+	/* animation: 200s linear infinite zoom-in; */
 }
 .cube,
 .face {
