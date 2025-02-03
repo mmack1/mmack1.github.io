@@ -304,7 +304,7 @@
   z-index: 1000;
   margin-top: 80px; 
   overflow: visible;
-  display: inline-block /*this was not here*/
+  /* display: inline-block */ /*this was not here*/
 }
 
 .typing-text {
