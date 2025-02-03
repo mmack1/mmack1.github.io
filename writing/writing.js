@@ -89,3 +89,33 @@ fetch("https://script.google.com/macros/s/AKfycbwvxFd7w_Mg6sH88jtrS4jSCtnNqkk_qN
   })
   .catch(error => console.error("Error fetching Google Sheets data:", error));
 
+
+  // Poem text
+const kiplingPoem = `<p>Building, <span>breaking</span>, and <span>fixing</span> things...</p>,
+  <p>Trying to <span>make</span> sense of the <span>digital</span> & the <span>human</span>.</p>,
+  <p><span>Data</span> isn’t just <span>numbers</span>; it’s <span>stories</span> waiting to be told.</p>`;
+
+// Function to insert poem into divs
+function insertPoemIntoDivs() {
+	// Get all .text divs
+	const textDivs = document.querySelectorAll(".text");
+
+	// Insert poem into all .text divs
+	textDivs.forEach((div) => {
+		div.innerHTML = kiplingPoem;
+	});
+}
+
+// Call the function when the DOM is fully loaded
+document.addEventListener("DOMContentLoaded", insertPoemIntoDivs);
+
+const contentDiv = document.querySelector(".content");
+function adjustContentSize() {
+	const viewportWidth = window.innerWidth;
+	const baseWidth = 1000;
+	const scaleFactor =
+		viewportWidth < baseWidth ? (viewportWidth / baseWidth) * 0.8 : 1;
+	contentDiv.style.transform = `scale(${scaleFactor})`;
+}
+window.addEventListener("load", adjustContentSize);
+window.addEventListener("resize", adjustContentSize);
