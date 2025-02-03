@@ -3,9 +3,6 @@
     font-family: 'Poppins', sans-serif;
     display: inline-block;
     position: flex;
-    justify-content: center; /* Centers horizontally */
-    align-items: center; /* Centers vertically */
-    text-align: center; /* Ensures text is centered */
     white-space: pre;
     overflow: visible;
     border-right: 2px solid black; /* Cursor effect */
