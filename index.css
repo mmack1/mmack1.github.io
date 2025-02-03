@@ -328,3 +328,34 @@
   }
 
   
+ /*  p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 10px; 
+}
+ */
+/* #holder {
+    font-size: 50px;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+} */
+/* 
+.typing-container {
+    font-size: 50px;
+    font-family: 'Poppins', sans-serif;
+    border-right: 2px solid black; 
+    z-index: 1000;
+    margin-top: 80px;
+    overflow: visible;
+    display: inline-block; 
+    white-space: pre;
+} */
+
+/* .typing-text {
+    display: inline-block;
+    animation: typing 2s steps(20) 1s 1 normal both, blink 0.7s step-end infinite alternate;
+    color: white;
+}
+ */
