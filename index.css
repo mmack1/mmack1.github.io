@@ -296,16 +296,20 @@
   }
   
   #typing-container {
-    font-size: 50px;
+    font-size: 25px;
     font-family: 'Poppins', sans-serif;
     position: flex;
     border-right: 2px solid black; /* Cursor effect */
     z-index: 1000;
+    margin-top: 50px; 
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    justify-content: center;
 }
 
   
   .typing-text {
-    display: inline-block;
+    display: block;
     animation: typing 2s steps(20) 1s 1 normal both, blink 0.7s step-end infinite alternate;
     color: white;
   }
