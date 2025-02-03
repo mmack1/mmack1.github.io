@@ -70,7 +70,10 @@ fetch("https://script.google.com/macros/s/AKfycbwvxFd7w_Mg6sH88jtrS4jSCtnNqkk_qN
           });
           tbody.appendChild(tr);
       });
+        // Add class to trigger opacity transition
+  document.querySelector('table').classList.add('loaded');
   })
+  
   .catch(error => console.error("Error fetching Google Sheets data:", error));
 </script>
 
