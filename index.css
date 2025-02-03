@@ -296,16 +296,15 @@
   }
   
   #typing-container {
-    font-size: 25px;
+    font-size: 50px;
     font-family: 'Poppins', sans-serif;
     position: flex;
     display: inline-block;
-    white-space: nowrap;
-    flex-direction: horizontal;
+    white-space: pre;
     border-right: 2px solid black; /* Cursor effect */
     z-index: 1000;
     margin-top: 80px; 
-    overflow: hidden;
+    overflow: visible;
 }
   
   .typing-text {
