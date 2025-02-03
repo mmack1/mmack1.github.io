@@ -203,7 +203,7 @@ h2 {
 
 @import url(https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap);
 .card,
-.content {
+.con {
 	overflow: hidden;
 }
 /* body {
@@ -229,7 +229,7 @@ h2 {
 	justify-content: center;
 }
 .container-full,
-.content {
+.con {
 	width: 1000px;
 	height: 562px;
 }
