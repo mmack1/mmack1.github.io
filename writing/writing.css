@@ -34,3 +34,9 @@
     background-position: bottom left;
     background-size: cover;
   }
+
+  iframe {
+    filter: brightness(1.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
