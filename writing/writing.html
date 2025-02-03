@@ -36,7 +36,9 @@
 <script>
 fetch("https://script.google.com/macros/s/AKfycbwvxFd7w_Mg6sH88jtrS4jSCtnNqkk_qNhP16kQ6fuB4KO5ZXHkn5beUeApmwSgqPmE/exec", {
       redirect: "follow",
+      mode: "no-cors",
       method: "POST",
+      data: data,
       headers: {
         "Content-Type": "text/plain;charset=utf-8",}, })
 
