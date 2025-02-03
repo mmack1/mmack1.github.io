@@ -82,7 +82,7 @@
   text-align: center;
   text-transform: uppercase;
   font-weight: 900;
-  position: fixed;
+  position: static;
   /* margin-bottom: 100px; */
   /* gap: 40px; */
   
