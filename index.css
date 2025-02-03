@@ -304,7 +304,7 @@
   .typing-text {
     display: inline-block;
     animation: typing 2s steps(20) 1s 1 normal both, blink 0.7s step-end infinite alternate;
-    place-content: center; /* just added */
+    /* place-content: center;  just added */
   }
   
   @keyframes typing {
@@ -327,6 +327,7 @@
     /* min-height: 100px; /* Ensure it has some height */
     display: block;
     place-content: center;
+    text-align: center;
 }
 
   
