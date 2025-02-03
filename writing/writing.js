@@ -46,3 +46,46 @@ window.addEventListener('scroll', function () {
   });
 });
 
+// Fetch data from Google Sheets and populate the table
+fetch("https://script.google.com/macros/s/AKfycbwvxFd7w_Mg6sH88jtrS4jSCtnNqkk_qNhP16kQ6fuB4KO5ZXHkn5beUeApmwSgqPmE/exec", {
+      redirect: "follow",
+      method: "GET",
+      headers: {
+        "Content-Type": "text/plain", // Set correct content-type for JSON
+      }, })
+  .then(response => response.json())  // Parse response to JSON
+  .then(data => {
+      let tableHead = document.getElementById("header-row");
+      console.log(data); // Check the structure of the data
+      
+      let tbody = document.querySelector("#sheet-data tbody");
+
+      // ✅ Clear previous content (avoids duplication)
+      tableHead.innerHTML = "";
+      tbody.innerHTML = "";
+
+      // ✅ Add header row
+      data[0].forEach(header => {
+          let th = document.createElement("th");
+          th.textContent = header;
+          tableHead.appendChild(th);
+      });
+
+      // ✅ Add table rows
+      data.slice(1).forEach(row => {
+          let tr = document.createElement("tr");
+          row.forEach(cell => {
+              let td = document.createElement("td");
+              td.textContent = cell;
+              tr.appendChild(td);
+          });
+          tbody.appendChild(tr);
+          console.log("split");
+          console.log(tr);
+      });
+
+      // Add class to trigger opacity transition
+      document.querySelector('table').classList.add('loaded');
+  })
+  .catch(error => console.error("Error fetching Google Sheets data:", error));
+
