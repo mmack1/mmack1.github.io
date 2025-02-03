@@ -2,7 +2,10 @@
     font-size: 24px;
     font-family: 'Poppins', sans-serif;
     display: inline-block;
-    align-items: center;
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+    height: 100vh; /* Full viewport height */
+    text-align: center; /* Ensures text is centered */
     white-space: nowrap;
     overflow: hidden;
     border-right: 2px solid black; /* Cursor effect */
