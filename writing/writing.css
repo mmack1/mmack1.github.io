@@ -2,6 +2,7 @@
     font-size: 24px;
     font-family: 'Poppins', sans-serif;
     display: inline-block;
+    align-items: center;
     white-space: nowrap;
     overflow: hidden;
     border-right: 2px solid black; /* Cursor effect */
