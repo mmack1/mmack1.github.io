@@ -11,7 +11,7 @@ window.addEventListener('scroll', function () {
 });
 
 
-fetch("https://script.google.com/macros/s/AKfycbyboifMBsBXrc-jbkosgGBeLO2MpM-1Z5hrcQwKYmnUXWdldqw7-RFtnYQs8612iw/exec", {
+fetch("https://script.google.com/macros/s/AKfycbyCdRsRJ7fmupfMlxIIPFlPspJMzTCenlfjYfonzzGLFftjK1lmB7IZTL66fE0coq8/exec", {
   method: "GET",
   mode: "cors",
   headers: {
