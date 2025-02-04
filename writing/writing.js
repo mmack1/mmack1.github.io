@@ -39,7 +39,7 @@ fetch("https://script.google.com/macros/s/AKfycbyboifMBsBXrc-jbkosgGBeLO2MpM-1Z5
   data.data[0].forEach(header => {
     let th = document.createElement("th");
     th.textContent = header;
-    // th.textContent = typeof header === "object" ? JSON.stringify(header) : header;
+    th.textContent = typeof header === "object" ? JSON.stringify(header) : header;
     tableHead.appendChild(th);
   });
   // Add table rows
