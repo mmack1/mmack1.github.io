@@ -98,19 +98,19 @@ th {
 
 
 #projects {
-  background-image: linear-gradient(to right, #b6d8f6, #44b1e4);
+  background-image: linear-gradient(to bottom, #b6d8f6, #44b1e4);
 }
 
 #experience {
-  background-image: linear-gradient(to right, #44b1e4, #12314c);
+  background-image: linear-gradient(to bottom, #44b1e4, #12314c);
 }
 
 #articles {
-  background-image: linear-gradient(to right, #b6d8f6, #44b1e4);
+  background-image: linear-gradient(to bottom, #b6d8f6, #44b1e4);
 }
 
 #art {
-  background-image: linear-gradient(to right, #44b1e4, #12314c);
+  background-image: linear-gradient(to bottom, #44b1e4, #12314c);
 }
 
 
