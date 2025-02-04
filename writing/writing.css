@@ -21,7 +21,7 @@
 	height: 100vh; /* Full screen height */
 	background: rgba(0, 0, 0, 0.7); /*0.8 Adjust background for contrast */
 	color: white;
-	/* padding: 20px; */ /* Add padding to prevent text from touching edges */
+	padding: 20px; /* Add padding to prevent text from touching edges */
 	box-sizing: border-box; /* Include padding in total size */
   }
   
@@ -145,6 +145,8 @@ th {
 	padding-top: 20px;
 	opacity: 0; /* Initially hidden */
 	transition: opacity 1s ease-in-out;
+	display: flex;
+	justify-content: center; /* Centers content horizontally */
 	padding-bottom: 50px; /* Prevents bottom cut-off */
   }
   
@@ -159,13 +161,21 @@ th {
 	border-radius: 8px;
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 	margin: 10px;
-	max-width: 90%; /* Adjust this to control column width */
+	max-width: 45%; /* Adjust this to control column width */
 	flex: 1 1 45%; /* Ensures even columns */
 	white-space: normal;
 	height: auto;
-	justify-content: center;
   }
   
+  
+  .scroll-section ul {
+	list-style-type: disc; /* Use bullet points */
+	padding-left: 40px; /* Indent bullet points */
+  }
+  
+  .scroll-section li {
+	margin-bottom: 10px; /* Space between list items */
+  }
   
   .scroll-section h2 {
 	font-size: 2.5rem; /* Adjusted size */
@@ -179,7 +189,12 @@ th {
 	transform: translateY(0); /* Smooth entry */
 	transition: opacity 1s ease-in-out, transform 1s ease-in-out; /* Smooth transition */
   }
-
+  
+  .side-quests {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+  }
 
 #projects {
   background-image: linear-gradient(to bottom, #b6d8f6, #80c9f1);
