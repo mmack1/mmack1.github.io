@@ -98,19 +98,21 @@ th {
 
 
 #projects {
-  background-color: #b6d8f6;
+  background-image: linear-gradient(to right, #b6d8f6, #44b1e4);
 }
 
 #experience {
-  background-color: #44b1e4;
+  background-image: linear-gradient(to right, #44b1e4, #12314c);
 }
 
 #articles {
-  background-color: #b6d8f6;
+  background-image: linear-gradient(to right, #b6d8f6, #44b1e4);
 }
 
 #art {
-  background-color: #44b1e4;
+  background-image: linear-gradient(to right, #44b1e4, #12314c);
+}
+
 }
 
 /* Fade-in effect when scrolling */
