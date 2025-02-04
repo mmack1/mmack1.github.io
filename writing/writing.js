@@ -40,12 +40,26 @@ fetch("https://script.google.com/macros/s/AKfycbyKFgWOeYTa31eSib280OwfUSx0soH8jK
           let tr = document.createElement("tr");
           row.forEach(cell => {
               let td = document.createElement("td");
-              td.textContent = cell;
+          
+              if (typeof cell === "object" && cell.text) {
+                  // If the cell has a link, create an anchor element
+                  if (cell.link) {
+                      let a = document.createElement("a");
+                      a.href = cell.link;
+                      a.textContent = cell.text;
+                      a.target = "_blank"; // Opens in a new tab
+                      td.appendChild(a);
+                  } else {
+                      td.textContent = cell.text;
+                  }
+              } else {
+                  td.textContent = cell; // Fallback for plain text
+              }
+          
               tr.appendChild(td);
           });
+        
           tbody.appendChild(tr);
-          console.log("split");
-          console.log(tr);
       });
 
       // Add class to trigger opacity transition
