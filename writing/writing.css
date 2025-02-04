@@ -228,13 +228,6 @@ h2 {
 .container {
 	justify-content: center;
   padding-top: 20px;
-  background-color: #12314c;
-  width: 100vw;
-	height: 100vh;
-  background-size: cover;
-  padding: 0;
-	margin: 0;
-  
 }
 .container-full,
 .face {
