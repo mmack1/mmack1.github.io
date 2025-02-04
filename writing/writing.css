@@ -5,6 +5,12 @@
 		height: 100vh;
 	}
 
+	/* making the color consistent with landing */
+	.navbar {
+		background: rgba(0, 0, 0, 0.7); /* Match the landing page background */
+		color: white; /* Ensure text is readable against the dark background */
+	}
+
 	/* the landing page */
   .side-quests-landing {
 	display: flex;
@@ -140,6 +146,8 @@ th {
 	box-sizing: border-box;
 	opacity: 0; /* Initially hidden */
 	transition: opacity 1s ease-in-out;
+	display: flex;
+	flex-wrap: wrap; /* Allows content to break into multiple lines */
 	justify-content: center; /* Centers content horizontally */
 	align-items: flex-start; /* Aligns items at the top */
 	gap: 20px; /* Space between columns */
