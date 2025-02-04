@@ -15,8 +15,9 @@
 
         body {
             font-family: Arial, sans-serif;
-            background-image: url('../images/pastel_vecteezy.jpg');
-            background-repeat: no-repeat;
+            /* background-image: url('../images/pastel_vecteezy.jpg'); */
+            /* background-repeat: no-repeat; */
+            background-color: #DAF1FE;
             /* padding: 20px; */
         }
 
