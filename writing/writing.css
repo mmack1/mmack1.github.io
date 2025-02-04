@@ -21,7 +21,7 @@
 	height: 100vh; /* Full screen height */
 	background: rgba(0, 0, 0, 0.7); /*0.8 Adjust background for contrast */
 	color: white;
-	padding: 20px; /* Add padding to prevent text from touching edges */
+	/* padding: 20px; */ /* Add padding to prevent text from touching edges */
 	box-sizing: border-box; /* Include padding in total size */
   }
   
