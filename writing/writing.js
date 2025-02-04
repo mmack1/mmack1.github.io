@@ -10,7 +10,7 @@ window.addEventListener('scroll', function () {
   });
 });
 
-fetch("https://script.google.com/macros/s/AKfycbyKFgWOeYTa31eSib280OwfUSx0soH8jKQkC2eENZpLHHJRCvZ9HpEAXpWQybPpw0RY/exec", {
+fetch("https://script.google.com/macros/s/AKfycbyboifMBsBXrc-jbkosgGBeLO2MpM-1Z5hrcQwKYmnUXWdldqw7-RFtnYQs8612iw/exec", {
   method: "GET",
   mode: "cors", // Ensure CORS mode is set
   headers: {
