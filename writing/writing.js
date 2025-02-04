@@ -14,7 +14,8 @@ fetch("https://script.google.com/macros/s/AKfycbyKFgWOeYTa31eSib280OwfUSx0soH8jK
   method: "GET",
   mode: "cors", // Ensure CORS mode is set
   headers: {
-    "Accept": "application/json", // Expect JSON response
+    "Content-Type": "application/json", // Expect JSON response
+    /* "Content-Type": "text/plain;charset=utf-8", */
   }
 })
 .then(response => {
