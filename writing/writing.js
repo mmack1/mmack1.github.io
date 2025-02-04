@@ -11,7 +11,7 @@ window.addEventListener('scroll', function () {
 });
 
 // Fetch data from Google Sheets and populate the table
-fetch("https://script.google.com/macros/s/AKfycbwvxFd7w_Mg6sH88jtrS4jSCtnNqkk_qNhP16kQ6fuB4KO5ZXHkn5beUeApmwSgqPmE/exec", {
+fetch("https://script.google.com/macros/s/AKfycbyKFgWOeYTa31eSib280OwfUSx0soH8jKQkC2eENZpLHHJRCvZ9HpEAXpWQybPpw0RY/exec", {
       redirect: "follow",
       method: "GET",
       headers: {
