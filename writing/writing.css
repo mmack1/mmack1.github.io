@@ -195,7 +195,9 @@ h2 {
 	border-radius: 8px; /* Rounded corners */
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 	margin: 20px auto; /* Centered with margin */
-	max-width: 800px; /* Limit width for better readability */
+	max-width: 900px; /* Limit width for better readability */
+	white-space: normal;
+	height: auto;
   }
   
   .scroll-section ul {
