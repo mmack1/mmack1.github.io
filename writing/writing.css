@@ -1,7 +1,9 @@
 body {
-    height: 100vh;
+    height: 100%;
+    width: 100%;
     background-image: url('../images/pastel_vecteezy.jpg');
     background-size: 100vh;
+    background-repeat: no-repeat;
     margin: 0;
     padding: 0;
 
