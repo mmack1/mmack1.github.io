@@ -145,7 +145,6 @@ th {
 	padding-top: 20px;
 	opacity: 0; /* Initially hidden */
 	transition: opacity 1s ease-in-out;
-	display: flex;
 	justify-content: center; /* Centers content horizontally */
 	padding-bottom: 50px; /* Prevents bottom cut-off */
   }
