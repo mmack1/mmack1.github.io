@@ -121,7 +121,18 @@ th {
 
 /* Add simple transitions to the h2 for smoother entry */
 h2 {
-  transition: transform 0.5s ease-in-out;
+  	transition: transform 0.5s ease-in-out;
+	font-size: 70px;
+	font-weight: 600;
+	background-image: linear-gradient(to bottom, #553c9a, #b393d3);
+	color: transparent;
+	background-clip: text;
+	-webkit-background-clip: text;
+	text-align: center; /* Center align the header */
+	margin-bottom: 30px; /* Space between header and table */
+	opacity: 0;
+	align-content: center;
+	animation: fadeIn 1s forwards; /* Add fade-in effect */
 }
 
 
@@ -147,7 +158,7 @@ h2 {
   align-items: center;
   text-align: center;
   height: 100vh; /* Full screen height */
-  background: rgba(0, 0, 0, 0.8); /* Adjust background for contrast */
+  background: rgba(0, 0, 0, 0.7); /*0.8 Adjust background for contrast */
   color: white;
 }
 
