@@ -13,10 +13,9 @@ window.addEventListener('scroll', function () {
 
 fetch("https://script.google.com/macros/s/AKfycbyboifMBsBXrc-jbkosgGBeLO2MpM-1Z5hrcQwKYmnUXWdldqw7-RFtnYQs8612iw/exec", {
   method: "GET",
-  mode: "cors", // Ensure CORS mode is set
+  mode: "cors",
   headers: {
-    /* "Content-Type": "application/json", */ // Expect JSON response
-    "Content-Type": "text/plain", 
+    "Content-Type": "text/plain;charset=utf-8",
   }
 })
 .then(response => {
@@ -27,21 +26,19 @@ fetch("https://script.google.com/macros/s/AKfycbyboifMBsBXrc-jbkosgGBeLO2MpM-1Z5
 })
 .then(data => {
   let tableHead = document.getElementById("header-row");
-  //console.log(data); // Check the structure of the data
-  
   let tbody = document.querySelector("#sheet-data tbody");
 
-  // Clear previous content (avoids duplication)
+  // Clear previous content
   tableHead.innerHTML = "";
   tbody.innerHTML = "";
 
   // Add header row
   data.data[0].forEach(header => {
     let th = document.createElement("th");
-    th.textContent = header;
-    th.textContent = typeof header === "object" ? JSON.stringify(header) : header;
+    th.textContent = typeof header === "object" && header.text ? header.text : header;
     tableHead.appendChild(th);
   });
+
   // Add table rows
   data.data.slice(1).forEach(row => {
     let tr = document.createElement("tr");
@@ -49,7 +46,6 @@ fetch("https://script.google.com/macros/s/AKfycbyboifMBsBXrc-jbkosgGBeLO2MpM-1Z5
       let td = document.createElement("td");
       
       if (typeof cell === "object" && cell.text) {
-        // If the cell has a link, create an anchor element
         if (cell.link) {
           let a = document.createElement("a");
           a.href = cell.link;
@@ -60,80 +56,20 @@ fetch("https://script.google.com/macros/s/AKfycbyboifMBsBXrc-jbkosgGBeLO2MpM-1Z5
           td.textContent = cell.text;
         }
       } else {
-        td.textContent = cell; // Fallback for plain text
+        td.textContent = cell !== null ? cell : ""; // Fallback for plain text and null values
       }
       
       tr.appendChild(td);
     });
     
     tbody.appendChild(tr);
-
-    
   });
 
   // Add class to trigger opacity transition
   document.querySelector('table').classList.add('loaded');
 })
 .catch(error => console.error("Error fetching Google Sheets data:", error));
-/* 
-// Fetch data from Google Sheets and populate the table
-fetch("https://script.google.com/macros/s/AKfycbyKFgWOeYTa31eSib280OwfUSx0soH8jKQkC2eENZpLHHJRCvZ9HpEAXpWQybPpw0RY/exec", {
-      redirect: "follow",
-      method: "GET",
-      headers: {
-        "Accept": "application/json", // Ensure response is treated as JSON
-        "Content-Type": "application/json", // Set correct content-type
-      } })
-  .then(response => response.json())  // Parse response to JSON
-  .then(data => {
-      let tableHead = document.getElementById("header-row");
-      console.log(data); // Check the structure of the data
-      
-      let tbody = document.querySelector("#sheet-data tbody");
 
-      // ✅ Clear previous content (avoids duplication)
-      tableHead.innerHTML = "";
-      tbody.innerHTML = "";
-
-      // ✅ Add header row
-      data[0].forEach(header => {
-          let th = document.createElement("th");
-          th.textContent = header;
-          tableHead.appendChild(th);
-      });
-
-      // ✅ Add table rows
-      data.slice(1).forEach(row => {
-          let tr = document.createElement("tr");
-          row.forEach(cell => {
-              let td = document.createElement("td");
-          
-              if (typeof cell === "object" && cell.text) {
-                  // If the cell has a link, create an anchor element
-                  if (cell.link) {
-                      let a = document.createElement("a");
-                      a.href = cell.link;
-                      a.textContent = cell.text;
-                      a.target = "_blank"; // Opens in a new tab
-                      td.appendChild(a);
-                  } else {
-                      td.textContent = cell.text;
-                  }
-              } else {
-                  td.textContent = cell; // Fallback for plain text
-              }
-          
-              tr.appendChild(td);
-          });
-        
-          tbody.appendChild(tr);
-      });
-
-      // Add class to trigger opacity transition
-      document.querySelector('table').classList.add('loaded');
-  })
-  .catch(error => console.error("Error fetching Google Sheets data:", error));
- */
 // Poem text
 const quotes = `<p class="animated-text">building, breaking, and fixing things, 
 Trying to make sense of the <span>digital</span> & the <span>human</span>, 
