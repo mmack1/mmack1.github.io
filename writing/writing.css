@@ -1,23 +1,22 @@
-body {
+/* body {
     height: 100vh;
     background-image: url('../images/pastel_vecteezy.jpg');
     background-size: 100vh;
     background-repeat: repeat;
     background: #12314c;
-    /* background-position: bottom left; */
-    /* background-position: sticky; */
-}
-/* body {
-	width: 100vw;
-	height: 100vh;
-	padding: 0;
-	margin: 0;
-	display: flex;
-  flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	background: black;
+
 } */
+
+body {
+  height: 100vh;
+  background-image: url('../images/pastel_vecteezy.jpg'); /* Background image */
+  background-size: cover; /* Ensures the image covers the top part */
+  background-position: top center; /* Ensures the image is at the top */
+  background-repeat: no-repeat; /* Ensures the image doesn’t repeat */
+  background-color: #12314c; /* Solid color for the rest of the body */
+  display: flex;
+  flex-direction: column;
+}
 
  /* Table styling */
 table {
