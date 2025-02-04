@@ -1,11 +1,48 @@
-body {
-    background-image: url('../images/pastel_vecteezy.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
-}
+	body {
+		background-image: url('../images/pastel_vecteezy.jpg');
+		background-repeat: no-repeat;
+		background-size: cover;
+		height: 100vh;
+	}
 
- /* Table styling */
+	/* making the color consistent with landing */
+	.navbar {
+		background: rgba(0, 0, 0, 0.7); /* Match the landing page background */
+		color: white; /* Ensure text is readable against the dark background */
+	}
+
+	/* the landing page */
+  .side-quests-landing {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	height: 100vh; /* Full screen height */
+	background: rgba(0, 0, 0, 0.7); /*0.8 Adjust background for contrast */
+	color: white;
+	padding: 20px; /* Add padding to prevent text from touching edges */
+	box-sizing: border-box; /* Include padding in total size */
+  }
+  
+  .side-quests-landing h1 {
+	font-size: 3rem;
+	font-weight: bold;
+	margin-bottom: 10px;
+  }
+  
+  .side-quests-landing p {
+	font-size: 1.5rem;
+	line-height: 1.4;
+	opacity: 0.8;
+	max-width: 80%;
+	margin: 0 auto; /* Center the paragraph */
+	padding: 10px; 
+	box-sizing: border-box;
+	
+  }
+
+ /* Table styling for the articles section */
 table {
   width: 80%;
   margin: 20px auto;
@@ -80,11 +117,7 @@ th {
 }
 
 
-.side-quests {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-}
+
 
 /* Scrollable Sections */
 .scroll-section {
@@ -98,6 +131,12 @@ th {
   display: flex;
   flex-grow: 1;
 }
+
+.side-quests {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+  }
 
 
 #projects {
@@ -138,39 +177,6 @@ h2 {
 	animation: fadeIn 1s forwards; /* Add fade-in effect */
 }
 
-
-.side-quests-landing {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  height: 100vh; /* Full screen height */
-  background: rgba(0, 0, 0, 0.7); /*0.8 Adjust background for contrast */
-  color: white;
-  padding: 20px; /* Add padding to prevent text from touching edges */
-  box-sizing: border-box; /* Include padding in total size */
-}
-
-.side-quests-landing h1 {
-  font-size: 3rem;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-
-
-.side-quests-landing p {
-  font-size: 1.5rem;
-  line-height: 1.4;
-  opacity: 0.8;
-  max-width: 80%;
-  margin: 0 auto; /* Center the paragraph */
-  padding: 10px; 
-  box-sizing: border-box;
-  
-}
-
 .scroll-section p {
 	font-size: 1.2rem; /* Adjusted for readability */
 	line-height: 1.6; /* Improved line spacing */
@@ -208,6 +214,8 @@ h2 {
 	transition: opacity 1s ease-in-out, transform 1s ease-in-out; /* Smooth transition */
   }
 
+
+/*   this is the bottom page animation */
 /*inspo taken from https://codepen.io/alexandrevacassin/pen/jENEZZq*/
 @import url(https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap);
 .card,
