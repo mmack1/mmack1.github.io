@@ -89,11 +89,14 @@ th {
 /* Scrollable Sections */
 .scroll-section {
   width: 100%;
-  height: 100vh; /* Full viewport height */
+  /* height: 100vh; */
+  min-height: 100vh;
   padding-top: 20px;
   box-sizing: border-box;
   opacity: 0; /* Initially hidden */
   transition: opacity 1s ease-in-out;
+  display: flex;
+  flex-grow: 1;
 }
 
 
