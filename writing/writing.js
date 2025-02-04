@@ -16,7 +16,7 @@ fetch("https://script.google.com/macros/s/AKfycbyboifMBsBXrc-jbkosgGBeLO2MpM-1Z5
   mode: "cors", // Ensure CORS mode is set
   headers: {
     /* "Content-Type": "application/json", */ // Expect JSON response
-    "Content-Type": "text/plain;charset=utf-8", 
+    "Content-Type": "text/plain", 
   }
 })
 .then(response => {
