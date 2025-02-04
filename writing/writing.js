@@ -14,8 +14,7 @@ fetch("https://script.google.com/macros/s/AKfycbyboifMBsBXrc-jbkosgGBeLO2MpM-1Z5
   method: "GET",
   mode: "cors", // Ensure CORS mode is set
   headers: {
-    /* "Content-Type": "application/json", */ // Expect JSON response
-    "Content-Type": "text/plain;charset=utf-8", 
+    "Content-Type": "text/plain;charset=utf-8",
   }
 })
 .then(response => {
@@ -34,10 +33,12 @@ fetch("https://script.google.com/macros/s/AKfycbyboifMBsBXrc-jbkosgGBeLO2MpM-1Z5
   tableHead.innerHTML = "";
   tbody.innerHTML = "";
 
-  // Add header row
+  // Add header row (ensure headers are properly extracted)
   data.data[0].forEach(header => {
     let th = document.createElement("th");
-    th.textContent = header;
+
+    // Ensure that header is a string, not an object
+    th.textContent = typeof header === "object" ? JSON.stringify(header) : header;
     tableHead.appendChild(th);
   });
 
@@ -46,20 +47,24 @@ fetch("https://script.google.com/macros/s/AKfycbyboifMBsBXrc-jbkosgGBeLO2MpM-1Z5
     let tr = document.createElement("tr");
     row.forEach(cell => {
       let td = document.createElement("td");
-      
-      if (typeof cell === "object" && cell.text) {
-        // If the cell has a link, create an anchor element
-        if (cell.link) {
-          let a = document.createElement("a");
-          a.href = cell.link;
-          a.textContent = cell.text;
-          a.target = "_blank"; // Opens in a new tab
-          td.appendChild(a);
+
+      if (typeof cell === "object") {
+        // Handle nested objects in the data
+        if (cell.text) {
+          if (cell.link) {
+            let a = document.createElement("a");
+            a.href = cell.link;
+            a.textContent = cell.text;
+            a.target = "_blank"; // Open link in new tab
+            td.appendChild(a);
+          } else {
+            td.textContent = cell.text;
+          }
         } else {
-          td.textContent = cell.text;
+          td.textContent = JSON.stringify(cell); // Convert object to string for debugging
         }
       } else {
-        td.textContent = cell; // Fallback for plain text
+        td.textContent = cell; // Normal text values
       }
       
       tr.appendChild(td);
@@ -72,6 +77,8 @@ fetch("https://script.google.com/macros/s/AKfycbyboifMBsBXrc-jbkosgGBeLO2MpM-1Z5
   document.querySelector('table').classList.add('loaded');
 })
 .catch(error => console.error("Error fetching Google Sheets data:", error));
+
+
 /* 
 // Fetch data from Google Sheets and populate the table
 fetch("https://script.google.com/macros/s/AKfycbyKFgWOeYTa31eSib280OwfUSx0soH8jKQkC2eENZpLHHJRCvZ9HpEAXpWQybPpw0RY/exec", {
