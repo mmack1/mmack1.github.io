@@ -1,10 +1,8 @@
 body {
-    height: 100%;
-    width: 100%;
     background-image: url('../images/pastel_vecteezy.jpg');
     background-repeat: no-repeat;
-    margin: 0;
-    padding: 0;
+    background-size: cover;
+    height: 100vh;
 }
 
  /* Table styling */
