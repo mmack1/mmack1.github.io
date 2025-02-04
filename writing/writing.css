@@ -181,6 +181,7 @@ h2 {
   line-height: 1.4;
   white-space: normal; /* Allows text to wrap */
   max-width: 100%; /* Prevents overflow */
+  color: black;
 }
 
 /*inspo taken from https://codepen.io/alexandrevacassin/pen/jENEZZq*/
