@@ -10,11 +10,13 @@ window.addEventListener('scroll', function () {
   });
 });
 
+
 fetch("https://script.google.com/macros/s/AKfycbyboifMBsBXrc-jbkosgGBeLO2MpM-1Z5hrcQwKYmnUXWdldqw7-RFtnYQs8612iw/exec", {
   method: "GET",
   mode: "cors", // Ensure CORS mode is set
   headers: {
-    "Content-Type": "text/plain;charset=utf-8",
+    /* "Content-Type": "application/json", */ // Expect JSON response
+    "Content-Type": "text/plain;charset=utf-8", 
   }
 })
 .then(response => {
@@ -25,7 +27,7 @@ fetch("https://script.google.com/macros/s/AKfycbyboifMBsBXrc-jbkosgGBeLO2MpM-1Z5
 })
 .then(data => {
   let tableHead = document.getElementById("header-row");
-  console.log(data); // Check the structure of the data
+  //console.log(data); // Check the structure of the data
   
   let tbody = document.querySelector("#sheet-data tbody");
 
@@ -33,52 +35,46 @@ fetch("https://script.google.com/macros/s/AKfycbyboifMBsBXrc-jbkosgGBeLO2MpM-1Z5
   tableHead.innerHTML = "";
   tbody.innerHTML = "";
 
-  // Add header row (ensure headers are properly extracted)
+  // Add header row
   data.data[0].forEach(header => {
     let th = document.createElement("th");
-
-    // Ensure that header is a string, not an object
-    th.textContent = typeof header === "object" ? JSON.stringify(header) : header;
+    th.textContent = header;
+    // th.textContent = typeof header === "object" ? JSON.stringify(header) : header;
     tableHead.appendChild(th);
   });
-
   // Add table rows
   data.data.slice(1).forEach(row => {
     let tr = document.createElement("tr");
     row.forEach(cell => {
       let td = document.createElement("td");
-
-      if (typeof cell === "object") {
-        // Handle nested objects in the data
-        if (cell.text) {
-          if (cell.link) {
-            let a = document.createElement("a");
-            a.href = cell.link;
-            a.textContent = cell.text;
-            a.target = "_blank"; // Open link in new tab
-            td.appendChild(a);
-          } else {
-            td.textContent = cell.text;
-          }
+      
+      if (typeof cell === "object" && cell.text) {
+        // If the cell has a link, create an anchor element
+        if (cell.link) {
+          let a = document.createElement("a");
+          a.href = cell.link;
+          a.textContent = cell.text;
+          a.target = "_blank"; // Opens in a new tab
+          td.appendChild(a);
         } else {
-          td.textContent = JSON.stringify(cell); // Convert object to string for debugging
+          td.textContent = cell.text;
         }
       } else {
-        td.textContent = cell; // Normal text values
+        td.textContent = cell; // Fallback for plain text
       }
       
       tr.appendChild(td);
     });
     
     tbody.appendChild(tr);
+
+    
   });
 
   // Add class to trigger opacity transition
   document.querySelector('table').classList.add('loaded');
 })
 .catch(error => console.error("Error fetching Google Sheets data:", error));
-
-
 /* 
 // Fetch data from Google Sheets and populate the table
 fetch("https://script.google.com/macros/s/AKfycbyKFgWOeYTa31eSib280OwfUSx0soH8jKQkC2eENZpLHHJRCvZ9HpEAXpWQybPpw0RY/exec", {
