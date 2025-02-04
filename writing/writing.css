@@ -182,8 +182,8 @@ h2 {
   color: black;
 }
 
-/*inspo taken from https://codepen.io/alexandrevacassin/pen/jENEZZq*/
 
+/*inspo taken from https://codepen.io/alexandrevacassin/pen/jENEZZq*/
 @import url(https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap);
 .card,
 .con {
@@ -223,8 +223,8 @@ h2 {
 }
 .container {
 	justify-content: center;
-  padding-top: 20px;
-  background: #12314c;
+  	padding-top: 20px;
+  	background: #12314c;
 }
 .container-full,
 .face {
@@ -379,3 +379,18 @@ span {
 		filter: brightness(0.8) contrast(1.3);
 	}
 }
+
+@keyframes scrollText {
+	0% { transform: translateX(100%); }  /* Start off-screen */
+	80% { transform: translateX(0%); }   /* Normal scrolling */
+	90% { transform: translateX(-3%); }  /* Slowing down */
+	95% { transform: translateX(-3%); }  /* Pause briefly */
+	100% { transform: translateX(100%); } /* Reset smoothly */
+  }
+  
+  .animated-text {
+	display: inline-block;
+	white-space: nowrap;
+	animation: scrollText 8s ease-in-out infinite;
+  }
+  
