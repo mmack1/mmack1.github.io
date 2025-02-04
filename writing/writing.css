@@ -3,7 +3,7 @@ body {
     background-image: url('../images/pastel_vecteezy.jpg');
     background-size: 100vh;
     background-repeat: no-repeat;
-    background-color: #12314c;
+    /* background-color: #12314c; */
     /* background-position: bottom left; */
     /* background-position: sticky; */
 }
@@ -179,6 +179,8 @@ h2 {
 .scroll-section p {
   font-size: 1.5rem;
   line-height: 1.4;
+  white-space: normal; /* Allows text to wrap */
+  max-width: 100%; /* Prevents overflow */
 }
 
 /*inspo taken from https://codepen.io/alexandrevacassin/pen/jENEZZq*/
