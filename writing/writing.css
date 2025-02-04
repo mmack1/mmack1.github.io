@@ -2,6 +2,7 @@ body {
     background-image: url('../images/pastel_vecteezy.jpg');
     background-repeat: no-repeat;
     background-size: cover;
+    height: 100vh;
 }
 
  /* Table styling */
@@ -112,7 +113,6 @@ th {
   background-image: linear-gradient(to right, #44b1e4, #12314c);
 }
 
-}
 
 /* Fade-in effect when scrolling */
 .scroll-section.visible {
