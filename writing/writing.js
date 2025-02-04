@@ -58,7 +58,8 @@ fetch("https://script.google.com/macros/s/AKfycbwvxFd7w_Mg6sH88jtrS4jSCtnNqkk_qN
 const quotes = `<p>building, breaking, and fixing things, 
 Trying to make sense of the <span>digital</span> & the <span>human</span>, 
 data isn’t just numbers; it’s <span>stories</span> waiting to be told, 
-any sufficiently advanced technology is indistinguishable from <span>magic</span>"
+any sufficiently advanced technology is indistinguishable from <span>magic</span>, 
+every <span>large system</span> that works started as a <span>small system</span> that worked
 </p>`;
 //  — Arthur C. Clarke (last quote)
 
