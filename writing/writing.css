@@ -32,7 +32,7 @@
   }
   
   .side-quests-landing p {
-	font-size: 1.5rem;
+	font-size: 1.5rem; /* maybe use vw */
 	line-height: 1.4;
 	opacity: 0.8;
 	max-width: 80%;
@@ -40,6 +40,27 @@
 	padding: 10px; 
 	box-sizing: border-box;
 	
+  }
+
+
+@media (max-width: 768px) {
+	.side-quests-landing h1 {
+	  font-size: 6vw; /* Adjust for smaller screens */
+	}
+  
+	.side-quests-landing p {
+	  font-size: 3vw; /* Adjust for smaller screens */
+	}
+  }
+  
+  @media (max-width: 480px) {
+	.side-quests-landing h1 {
+	  font-size: 8vw; /* Further adjust for very small screens */
+	}
+  
+	.side-quests-landing p {
+	  font-size: 4vw; /* Further adjust for very small screens */
+	}
   }
 
  /* Table styling for the articles section */
@@ -179,6 +200,7 @@ th {
 	flex-direction: row;
   }
 
+  
 
 #projects {
   background-image: linear-gradient(to bottom, #b6d8f6, #80c9f1);
