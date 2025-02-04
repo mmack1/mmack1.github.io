@@ -391,9 +391,15 @@ span {
 	100% { transform: translateX(100%); } /* Reset smoothly */
   }
   
-  .animated-text {
+.animated-text {
 	display: inline-block;
 	white-space: nowrap;
-	animation: scrollText 8s ease-in-out infinite;
-  }
+	animation: scrollText 15s ease-in-out infinite;
+}
   
+
+  .text p {
+	position: absolute;
+	white-space: nowrap;
+	animation: scrollText 20s linear infinite; /* Match the duration */
+  }
