@@ -194,6 +194,11 @@ th {
 	transition: opacity 1s ease-in-out, transform 1s ease-in-out; /* Smooth transition */
   }
   
+  .side-quests {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+  }
 
 #projects {
   background-image: linear-gradient(to bottom, #b6d8f6, #80c9f1);
