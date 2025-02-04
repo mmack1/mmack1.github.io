@@ -418,9 +418,3 @@ span {
 		filter: brightness(0.8) contrast(1.3);
 	}
 }
-
-  .text p {
-	position: absolute;
-	white-space: nowrap;
-	animation: scrollText 20s linear infinite; /* Match the duration */
-  }
