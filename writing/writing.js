@@ -15,8 +15,9 @@ fetch("https://script.google.com/macros/s/AKfycbyKFgWOeYTa31eSib280OwfUSx0soH8jK
       redirect: "follow",
       method: "GET",
       headers: {
-        "Content-Type": "text/plain", // Set correct content-type for JSON
-      }, })
+        "Accept": "application/json", // Ensure response is treated as JSON
+        "Content-Type": "application/json", // Set correct content-type
+      } })
   .then(response => response.json())  // Parse response to JSON
   .then(data => {
       let tableHead = document.getElementById("header-row");
