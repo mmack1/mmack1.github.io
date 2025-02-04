@@ -55,20 +55,21 @@ fetch("https://script.google.com/macros/s/AKfycbwvxFd7w_Mg6sH88jtrS4jSCtnNqkk_qN
 
 
   // Poem text
-const kiplingPoem = `<p>building, breaking, and fixing things, 
+const quotes = `<p>building, breaking, and fixing things, 
 Trying to make sense of the <span>digital</span> & the <span>human</span>, 
 data isn’t just numbers; it’s <span>stories</span> waiting to be told, 
 any sufficiently advanced technology is indistinguishable from <span>magic</span>"
 </p>`;
 //  — Arthur C. Clarke (last quote)
-// Function to insert poem into divs
+
+// Function to insert quotes into divs
 function insertPoemIntoDivs() {
 	// Get all .text divs
 	const textDivs = document.querySelectorAll(".text");
 
 	// Insert poem into all .text divs
 	textDivs.forEach((div) => {
-		div.innerHTML = kiplingPoem;
+		div.innerHTML = quotes;
 	});
 }
 
