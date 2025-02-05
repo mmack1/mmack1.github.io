@@ -230,6 +230,7 @@ width: 1000px;
 }
 .bossImage {
 position: absolute;
+bottom: 0; /* ADDED */
 width: 200px;
 z-index: 2;
 }
