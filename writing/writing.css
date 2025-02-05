@@ -331,17 +331,17 @@ animation: 150s linear infinite right;
 }
 @keyframes left {
 100% {
-	margin-left: -25000px;/* -54000px; */
+	margin-left: -27000px;/* -54000px; */
 }
 }
 @keyframes back {
 100% {
-	margin-left: -25800px;/* -54870px; */
+	margin-left: -28935px;/* -54870px; */
 }
 }
 @keyframes right {
 100% {
-	margin-left: -26700px;/* -55740px; */
+	margin-left: -27870px;/* -55740px; */
 }
 }
 .hue {
