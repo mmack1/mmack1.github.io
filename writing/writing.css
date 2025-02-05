@@ -236,12 +236,13 @@ z-index: 2;
 }
 .con {
 border-radius: 40px;
-animation: 200s linear infinite brightness;
+animation: 200s linear infinite brightness; /* CHANGE? */
+
 }
 .container {
 justify-content: center;
-  padding-top: 20px;
-  background: #12314c;
+padding-top: 20px; /* ADDED */
+background: #12314c;/* ADDED */
 }
 .container-full,
 .face {
@@ -314,18 +315,18 @@ transform: translateY(-245px) rotateX(-90deg) scaleY(-1);
 }
 .left p {
 margin-left: 480px;
-/* animation: 200s linear infinite left; */
-animation: scrollText 10s linear infinite;
+animation: 100s linear infinite left;
+/* animation: scrollText 10s linear infinite; */
 }
 .back p {
 margin-left: -390px;
-/* animation: 200s linear infinite back; */
-animation: scrollText 10s linear infinite;
+animation: 100s linear infinite back;
+/* animation: scrollText 10s linear infinite; */
 }
 .right p {
 margin-left: -1260px;
-/* animation: 200s linear infinite right; */
-animation: scrollText 10s linear infinite;
+animation: 100s linear infinite right;
+/* animation: scrollText 10s linear infinite; */
 }
 @keyframes left {
 100% {
