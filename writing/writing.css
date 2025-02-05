@@ -33,7 +33,7 @@ margin-bottom: 10px;
 }
 
 .side-quests-landing p {
-font-size: 1.5rem; /* maybe use vw */
+font-size: 1.5vw; /* maybe use vw (rem) */
 line-height: 1.4;
 opacity: 0.8;
 max-width: 80%;
@@ -42,6 +42,7 @@ padding: 10px;
 box-sizing: border-box;
 overflow-wrap: break-word; /* ADDED Ensure long words break */
 word-wrap: break-word; /* ADDED Support for older browsers */
+overflow: visible;
 }
 
 
