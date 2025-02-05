@@ -417,7 +417,9 @@ transform: scaleY(70%);
 	max-width: 600px;
 	margin: auto;
 	overflow: hidden;
+	border-radius: 8px;
   }
+  
   
   .carousel-images {
 	display: flex;
@@ -425,7 +427,7 @@ transform: scaleY(70%);
   }
   
   .carousel-images img {
-	width: 100%;
+	width: 90%;
 	border-radius: 8px;
   }
   
@@ -452,3 +454,5 @@ transform: scaleY(70%);
   button:hover {
 	background-color: rgba(0, 0, 0, 0.8);
   }
+
+  
