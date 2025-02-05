@@ -317,17 +317,17 @@ transform: translateY(-245px) rotateX(-90deg) scaleY(-1);
 }
 .left p {
 margin-left: 480px;
-animation: 30s linear infinite left;
+animation: 200s linear infinite left;
 /* animation: scrollText 10s linear infinite; */
 }
 .back p {
 margin-left: -390px;
-animation: 30s linear infinite back;
+animation: 200s linear infinite back;
 /* animation: scrollText 10s linear infinite; */
 }
 .right p {
 margin-left: -1260px;
-animation: 30s linear infinite right;
+animation: 200s linear infinite right;
 /* animation: scrollText 10s linear infinite; */
 }
 @keyframes left {
@@ -403,14 +403,6 @@ transform: scaleY(70%);
 }
 }
 
-@keyframes scrollText {
-  0% {
-    transform: translateX(100%); /* Start off-screen to the right */
-  }
-  100% {
-    transform: translateX(-100%); /* End off-screen to the left */
-  }
-}
 
 
 .carousel {
@@ -424,7 +416,7 @@ transform: scaleY(70%);
   
   .carousel-images {
 	display: flex;
-	transition: transform 1.0s ease;
+	transition: transform 2.0s ease;
   }
   
   .carousel-images img {
