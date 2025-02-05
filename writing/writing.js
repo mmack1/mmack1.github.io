@@ -121,3 +121,16 @@ function adjustContentSize() {
 }
 window.addEventListener("load", adjustContentSize);
 window.addEventListener("resize", adjustContentSize);
+
+
+let currentIndex = 0;
+
+function changeSlide(direction) {
+  const images = document.querySelectorAll('.carousel-images img');
+  const totalImages = images.length;
+  currentIndex = (currentIndex + direction + totalImages) % totalImages;
+  document.querySelector('.carousel-images').style.transform = `translateX(-${currentIndex * 100}%)`;
+}
+
+// Optional: Auto-slide every 3 seconds
+setInterval(() => changeSlide(1), 3000);

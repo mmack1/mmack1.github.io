@@ -410,3 +410,45 @@ transform: scaleY(70%);
     transform: translateX(-100%); /* End off-screen to the left */
   }
 }
+
+
+.carousel {
+	position: relative;
+	max-width: 600px;
+	margin: auto;
+	overflow: hidden;
+  }
+  
+  .carousel-images {
+	display: flex;
+	transition: transform 0.5s ease;
+  }
+  
+  .carousel-images img {
+	width: 100%;
+	border-radius: 8px;
+  }
+  
+  button {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	background-color: rgba(0, 0, 0, 0.5);
+	border: none;
+	color: white;
+	padding: 10px;
+	cursor: pointer;
+	z-index: 2;
+  }
+  
+  button.prev {
+	left: 10px;
+  }
+  
+  button.next {
+	right: 10px;
+  }
+  
+  button:hover {
+	background-color: rgba(0, 0, 0, 0.8);
+  }
