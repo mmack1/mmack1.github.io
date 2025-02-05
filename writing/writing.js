@@ -10,6 +10,23 @@ window.addEventListener('scroll', function () {
   });
 });
 
+/* ALT options for improvement: Instead of fetching the data every
+ time the page loads, store it in localStorage. OR Use a proxy server. 
+and only refresh it occasionally. OR Instead of showing nothing while waiting, 
+can display a loading placeholder and update it once the data arrives. 
+WANT: Instead of fetching directly from Google Apps Script, 
+    Use a Node.js/Express backend to fetch the data once.
+    Store it in a server-side cache (Redis, Firebase, etc.).
+    Serve the cached response quickly.
+
+    Google Apps Script can be slow since it's running a script for each request. 
+    The Google Sheets API is faster. Use Fetch with API Key
+
+    JSON file on a CDN (e.g., Cloudflare, Firebase)
+    Static JSON hosted on GitHub Pages
+    Fast NoSQL database (Firestore, Supabase)
+
+*/
 function fetchSheetData(){
     fetch("https://script.google.com/macros/s/AKfycbyCdRsRJ7fmupfMlxIIPFlPspJMzTCenlfjYfonzzGLFftjK1lmB7IZTL66fE0coq8/exec", {
       method: "GET",

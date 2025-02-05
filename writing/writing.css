@@ -405,7 +405,7 @@ transform: scaleY(70%);
 .left p,
 .back p,
 .right p {
-  animation: scrollText 10s linear infinite; /* Apply continuous animation */
+  animation: scrollText 100s linear infinite; /* Apply continuous animation */
 }
 
 @keyframes scrollText {
