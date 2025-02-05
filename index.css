@@ -273,23 +273,12 @@
   position: relative;
 }
 
-#writings {
-  background: linear-gradient(
-    rgb(252, 250, 229),
-    rgb(252, 250, 229) 50%,
-    rgb(247, 213, 213) 50%,
-    rgb(254, 181, 181) 76%,
-    rgb(255, 157, 157) 90%,
-    rgb(243, 115, 115)
-  );
-  background-size: 100% 200%;
-  position: relative;
-}
 
 #personal-links {
   background: linear-gradient(rgb(252, 250, 229), rgb(252, 250, 229) 100%);
   background-size: 100% 200%;
-  position: relative;
+  position: flex;
+  flex-direction: column;
 }
 
 #typing-container {
