@@ -10,66 +10,67 @@ window.addEventListener('scroll', function () {
   });
 });
 
-
-fetch("https://script.google.com/macros/s/AKfycbyCdRsRJ7fmupfMlxIIPFlPspJMzTCenlfjYfonzzGLFftjK1lmB7IZTL66fE0coq8/exec", {
-  method: "GET",
-  mode: "cors",
-  headers: {
-    "Content-Type": "text/plain;charset=utf-8",
-  }
-})
-.then(response => {
-  if (!response.ok) {
-    throw new Error('Network response was not ok');
-  }
-  return response.json();
-})
-.then(data => {
-  let tableHead = document.getElementById("header-row");
-  let tbody = document.querySelector("#sheet-data tbody");
-
-  // Clear previous content
-  tableHead.innerHTML = "";
-  tbody.innerHTML = "";
-
-  // Add header row
-  data.data[0].forEach(header => {
-    let th = document.createElement("th");
-    th.textContent = typeof header === "object" && header.text ? header.text : header;
-    tableHead.appendChild(th);
-  });
-
-  // Add table rows
-  data.data.slice(1).forEach(row => {
-    let tr = document.createElement("tr");
-    row.forEach(cell => {
-      let td = document.createElement("td");
-      
-      if (typeof cell === "object" && cell.text) {
-        if (cell.link) {
-          let a = document.createElement("a");
-          a.href = cell.link;
-          a.textContent = cell.text;
-          a.target = "_blank"; // Opens in a new tab
-          td.appendChild(a);
-        } else {
-          td.textContent = cell.text;
-        }
-      } else {
-        td.textContent = cell !== null ? cell : ""; // Fallback for plain text and null values
+function fetchSheetData(){
+    fetch("https://script.google.com/macros/s/AKfycbyCdRsRJ7fmupfMlxIIPFlPspJMzTCenlfjYfonzzGLFftjK1lmB7IZTL66fE0coq8/exec", {
+      method: "GET",
+      mode: "cors",
+      headers: {
+        "Content-Type": "text/plain;charset=utf-8",
       }
-      
-      tr.appendChild(td);
-    });
-    
-    tbody.appendChild(tr);
-  });
+    })
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      return response.json();
+    })
+    .then(data => {
+      let tableHead = document.getElementById("header-row");
+      let tbody = document.querySelector("#sheet-data tbody");
 
-  // Add class to trigger opacity transition
-  document.querySelector('table').classList.add('loaded');
-})
-.catch(error => console.error("Error fetching Google Sheets data:", error));
+      // Clear previous content
+      tableHead.innerHTML = "";
+      tbody.innerHTML = "";
 
+      // Add header row
+      data.data[0].forEach(header => {
+        let th = document.createElement("th");
+        th.textContent = typeof header === "object" && header.text ? header.text : header;
+        tableHead.appendChild(th);
+      });
+
+      // Add table rows
+      data.data.slice(1).forEach(row => {
+        let tr = document.createElement("tr");
+        row.forEach(cell => {
+          let td = document.createElement("td");
+          
+          if (typeof cell === "object" && cell.text) {
+            if (cell.link) {
+              let a = document.createElement("a");
+              a.href = cell.link;
+              a.textContent = cell.text;
+              a.target = "_blank"; // Opens in a new tab
+              td.appendChild(a);
+            } else {
+              td.textContent = cell.text;
+            }
+          } else {
+            td.textContent = cell !== null ? cell : ""; // Fallback for plain text and null values
+          }
+          
+          tr.appendChild(td);
+        });
+        
+        tbody.appendChild(tr);
+      });
+
+      // Add class to trigger opacity transition
+      document.querySelector('table').classList.add('loaded');
+    })
+    .catch(error => console.error("Error fetching Google Sheets data:", error));
+}
+window.addEventListener("DOMContentLoaded", fetchSheetData);
 
 // Poem text
 const quotes = `<p class="animated-text">building, breaking, and fixing things, 
