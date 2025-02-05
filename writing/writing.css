@@ -427,7 +427,7 @@ transform: scaleY(70%);
   }
   
   .carousel-images img {
-	width: 90%;
+	width:100%;
 	border-radius: 8px;
   }
   
