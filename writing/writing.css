@@ -317,32 +317,31 @@ transform: translateY(-245px) rotateX(-90deg) scaleY(-1);
 }
 .left p {
 margin-left: 480px;
-animation: 200s linear infinite left;
+animation: 150s linear infinite left;
 /* animation: scrollText 10s linear infinite; */
 }
 .back p {
 margin-left: -390px;
-animation: 200s linear infinite back;
+animation: 150s linear infinite back;
 /* animation: scrollText 10s linear infinite; */
 }
 .right p {
 margin-left: -1260px;
-animation: 200s linear infinite right;
-/* animation: scrollText 10s linear infinite; */
+animation: 150s linear infinite right;
 }
 @keyframes left {
 100% {
-	margin-left: -54000px;
+	margin-left: -25000px;/* -54000px; */
 }
 }
 @keyframes back {
 100% {
-	margin-left: -54870px;
+	margin-left: -25800px;/* -54870px; */
 }
 }
 @keyframes right {
 100% {
-	margin-left: -55740px;
+	margin-left: -26700px;/* -55740px; */
 }
 }
 .hue {
