@@ -45,27 +45,6 @@ word-wrap: break-word; /* ADDED Support for older browsers */
 overflow: visible;
 }
 
-
-@media (max-width: 768px) {
-.side-quests-landing h1 {
-  font-size: 6vw; /* Adjust for smaller screens */
-}
-
-.side-quests-landing p {
-  font-size: 3vw; /* Adjust for smaller screens */
-}
-}
-
-@media (max-width: 480px) {
-.side-quests-landing h1 {
-  font-size: 8vw; /* Further adjust for very small screens */
-}
-
-.side-quests-landing p {
-  font-size: 4vw; /* Further adjust for very small screens */
-}
-}
-
 /* Table styling for the articles section */
 table {
 width: 80%;

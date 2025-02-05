@@ -70,6 +70,7 @@ fetch("https://script.google.com/macros/s/AKfycbyCdRsRJ7fmupfMlxIIPFlPspJMzTCenl
 })
 .catch(error => console.error("Error fetching Google Sheets data:", error));
 
+
 // Poem text
 const quotes = `<p class="animated-text">building, breaking, and fixing things, 
 Trying to make sense of the <span>digital</span> & the <span>human</span>, 
