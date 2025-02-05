@@ -18,7 +18,7 @@ flex-direction: column;
 justify-content: center;
 align-items: center;
 text-align: center;
-height: 100%; /* Full screen height 100vh*/
+height: 90%; /* Full screen height 100vh*/
 background: rgba(0, 0, 0, 0.7); /*0.8 Adjust background for contrast */
 color: white;
 padding: 20px;  /* ADDED this padding to prevent text from touching edges */
