@@ -208,3 +208,22 @@
     display: none;
   }
 }
+
+.wave-container {
+  display: inline-block;
+  overflow: hidden; /* Ensures the image doesn't overflow the container */
+}
+
+.wave-image {
+  width: 100%;
+  animation: wave 2s infinite ease-in-out;
+}
+
+@keyframes wave {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px); /* Adjust the value for more or less wave */
+  }
+}
