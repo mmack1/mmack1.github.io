@@ -9,7 +9,7 @@
         .skill-box {
             padding: 10px;
             margin: 5px;
-            display: inline-block;
+            display: block; /* inline-block */
             border-radius: 5px;
         }
 
