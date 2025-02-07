@@ -2,6 +2,9 @@
         .intermediate-header { color: blue; }
         .advanced-header { color: #003E7F; }
 
+        .skill h3 {
+            align-items: center;
+        }
         .skill-box {
             padding: 10px;
             margin: 5px;
