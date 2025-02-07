@@ -230,7 +230,6 @@
   height: auto;
   animation: wave 2s infinite ease-in-out;
   transition: transform 0.3s ease;
-  align-items: center;
 }
 
 .interactive-image:hover {
