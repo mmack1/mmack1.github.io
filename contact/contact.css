@@ -222,7 +222,7 @@
 
 .wave-image {
   width: 100%;
-  position: relative;
+  position: absolute;
   height: auto;
   animation: wave 2s infinite ease-in-out;
   transition: transform 0.3s ease;

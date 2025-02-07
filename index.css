@@ -280,6 +280,7 @@
   position: flex;
   flex-direction: column;
   overflow: hidden;
+  font-size: 1.5vw;
 }
 
 #typing-container {
