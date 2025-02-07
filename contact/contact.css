@@ -67,6 +67,7 @@
   }
   .side {
     height: 12rem;
+    position: relative;
     background-color: #fcfcf8;
     outline: 1px solid transparent;
     &:nth-of-type(1) {
