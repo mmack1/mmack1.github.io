@@ -87,10 +87,9 @@
 
     .side p:nth-of-type(4) img {
       position: absolute;
-      transform: translateY(-50%);
       width: 10px; /* Adjust size as needed */
-      /* display: block;
-      margin-left: auto; */
+      display: block;
+      margin-left: auto;
     }
     
     
@@ -224,9 +223,8 @@
 }
 
 .wave-image {
-  /* width: 100%; */
-  /* position: absolute; */
-  /* height: auto; */
+  width: 100%;
+  height: auto;
   animation: wave 2s infinite ease-in-out;
   transition: transform 0.3s ease;
   z-index: 10000;
