@@ -86,8 +86,13 @@
     }
 
     .side p:nth-of-type(4) img {
-      display: block;
-      margin-left: auto;
+      position: absolute;
+      right: 10px; /* Adjust to move left or right */
+      top: 50%; /* Center vertically */
+      transform: translateY(-50%);
+      width: 50px; /* Adjust size as needed */
+      /* display: block;
+      margin-left: auto; */
     }
     
     
@@ -219,7 +224,7 @@
     display: none;
   }
 }
-
+/* 
 .wave-image {
   width: 100%;
   position: absolute;
@@ -227,7 +232,7 @@
   animation: wave 2s infinite ease-in-out;
   transition: transform 0.3s ease;
   z-index: 10000;
-}
+} */
 
 .interactive-image:hover {
   transform: scale(1.1); /* Enlarge the image on hover */
