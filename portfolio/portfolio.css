@@ -56,9 +56,16 @@ body {
     border-radius: 8px;
     transition: all 0.3s ease;
     overflow: hidden;
-    width: calc(100% / 3 - 1rem); /* Adjust based on how many should fit per row */
-    min-height: 10rem;
-    flex-grow: 1; /* Allows items to grow within the container */
+}
+.project-item h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.project-item p {
+    font-size: 0.9rem;
+    color: #555;
+    line-height: 1.5;
 }
 
 .project-item:hover {
@@ -69,7 +76,7 @@ body {
 }
 
   
-  .project-item .more-info {
+.project-item .more-info {
     position: absolute;
     top: 0;
     left: 0;
@@ -81,19 +88,20 @@ body {
     padding: 20px;
     transition: opacity 0.3s ease, transform 0.3s ease; /* Transition for opacity and size */
     z-index: 1; /* Ensure the more-info content appears on top */
-    display: flex;
+    /* 
+    display: flex
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    transform: scale(0); /* Start with no size */
+    transform: scale(0); /* Start with no size */ */
   }
   
-  .project-item:hover .more-info {
+.project-item:hover .more-info {
     opacity: 1; /* Show extra content on hover */
     transform: scale(1); /* Scale it to its original size based on content */
   }
   
-  .project-item .more-info p {
+.project-item .more-info p {
     font-size: 1.1em;
     opacity: 1;
     text-align: center;
@@ -101,32 +109,24 @@ body {
     transition: opacity 0.3s ease;
   }
   
-  .project-item .more-info img {
+.project-item .more-info img {
     width: 50%; /* Adjust size of the image */
     height: auto;
     margin-top: 10px;
   }
   
-  /* Hide original content when hovered */
-  .project-item h3, .project-item p {
+/* Show original content w/o hover */
+.project-item h3, .project-item p {
     opacity: 1;
     transition: opacity 0.3s ease;
   }
   
+    /* Hide original content when hovered */
   .project-item:hover h3, .project-item:hover p {
-    opacity: 0; /* Hide original text */
+    opacity: 0; 
   }
   
-.project-item h3 {
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-}
-
-.project-item p {
-    font-size: 0.9rem;
-    color: #555;
-    line-height: 1.5;
-}
+  
 
 /* Responsive Design */
 @media (max-width: 768px) {
