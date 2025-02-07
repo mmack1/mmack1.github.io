@@ -13,8 +13,6 @@ body {
 /* Navbar */
 .navbar {
     background-color: #ACD5F4;
-    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 10px 20px; */
 }
 
 
@@ -100,14 +98,14 @@ body {
     transform: scale(1); /* Scale it to its original size based on content */
   }
   
-/* .project-item .more-info p {
+.project-item:hover .more-info p {
     font-size: 1.1rem;
     opacity: 1; 
     text-align: center;
     color: black;
     transition: opacity 0.3s ease;
   }
-   */
+   
 .project-item .more-info img {
     width: 50%; /* Adjust size of the image */
     height: auto;
