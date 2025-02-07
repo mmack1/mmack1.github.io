@@ -86,10 +86,9 @@
     }
 
     .side p:nth-of-type(4) img {
-      position: absolute;
-      width: 10px; /* Adjust size as needed */
+      position: relative;
       display: block;
-      margin-left: auto;
+      float:left;
     }
     
     
