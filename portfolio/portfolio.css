@@ -55,7 +55,9 @@ body {
     border: 1px solid #ddd;
     border-radius: 8px;
     transition: all 0.3s ease;
-    overflow: hidden;
+    overflow: visible; /* CHANGED */
+    overflow-wrap: break-word; /* CHANGED */
+    
 }
 .project-item h3 {
     font-size: 1.2rem;
@@ -88,6 +90,9 @@ body {
     padding: 20px;
     transition: opacity 0.3s ease, transform 0.3s ease; /* Transition for opacity and size */
     z-index: 1; /* Ensure the more-info content appears on top */
+    overflow: visible; /* ADDED */
+    overflow: scroll;
+    overflow-wrap: break-word;
   }
   
 .project-item:hover .more-info {
