@@ -279,6 +279,7 @@
   background-size: 100% 200%;
   position: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 
 #typing-container {
