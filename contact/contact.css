@@ -86,7 +86,7 @@
     }
 
     .side p:nth-of-type(4) img {
-      position: relative;
+      position: absolute;
       display: block;
       float:left;
     }
@@ -228,10 +228,6 @@
   transition: transform 0.3s ease;
   z-index: 10000;
 } 
-
-.interactive-image:hover {
-  transform: scale(1.1); /* Enlarge the image on hover */
-}
 
 @keyframes wave {
   0%, 100% {
