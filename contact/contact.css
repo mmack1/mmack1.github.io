@@ -212,11 +212,20 @@
 .wave-container {
   display: inline-block;
   overflow: hidden; /* Ensures the image doesn't overflow the container */
+  width: 50%; /* 50% of the parent container's width */
+  max-width: 300px; /* Maximum width */
+  height: auto;
 }
 
 .wave-image {
   width: 100%;
+  height: auto;
   animation: wave 2s infinite ease-in-out;
+  transition: transform 0.3s ease;
+}
+
+.interactive-image:hover {
+  transform: scale(1.1); /* Enlarge the image on hover */
 }
 
 @keyframes wave {
