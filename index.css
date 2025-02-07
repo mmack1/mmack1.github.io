@@ -280,6 +280,8 @@
   position: flex;
   flex-direction: column;
   overflow: visible;
+  /* overflow: scroll;
+  overflow-wrap: break-word; */
 }
 
 #typing-container {
