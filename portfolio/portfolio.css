@@ -90,8 +90,10 @@ body {
   
   .project-item .more-info p {
     font-size: 1.1em;
+    opacity: 1;
     text-align: center;
     color: black;
+    transition: opacity 0.3s ease;
   }
   
   .project-item .more-info img {
