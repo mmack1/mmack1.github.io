@@ -215,6 +215,7 @@
   width: 50%; /* 50% of the parent container's width */
   max-width: 300px; /* Maximum width */
   height: auto;
+  background: transparent;
 }
 
 .wave-image {
