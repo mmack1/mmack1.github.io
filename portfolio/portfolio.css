@@ -44,6 +44,7 @@ body {
     gap: 20px;
     padding: 20px;
     justify-content: center;
+    
 }
 
 .project-item {
@@ -55,6 +56,9 @@ body {
     border-radius: 8px;
     transition: all 0.3s ease;
     overflow: hidden;
+    width: calc(100% / 3 - 1rem); /* Adjust based on how many should fit per row */
+    min-height: 10rem;
+    flex-grow: 1; /* Allows items to grow within the container */
 }
 
 .project-item:hover {
