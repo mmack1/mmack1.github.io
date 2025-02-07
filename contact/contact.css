@@ -85,12 +85,6 @@
     &.side p:nth-of-type(4) {
       text-align: right;
     }
-
-    .side p:nth-of-type(4) img {
-      position: absolute;
-      display: block;
-      float:left;
-    }
     
     
 }
@@ -230,6 +224,7 @@
   transition: transform 0.3s ease;
   z-index: 10000;
   object-position: left bottom;
+  float:left;
 } 
 
 @keyframes wave {
