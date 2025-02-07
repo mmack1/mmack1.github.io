@@ -93,7 +93,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    transform: scale(0); /* Start with no size */ */
+    transform: scale(0); Start with no size */
   }
   
 .project-item:hover .more-info {
