@@ -215,13 +215,9 @@
   overflow: hidden; /* Ensures the image doesn't overflow the container */
   background: transparent;
   z-index: 1000;
-
-  
-  bottom: 10px; 
-  left: 10px; 
-  width: 80px; 
-  max-width: 100px;
-  z-index: 10;
+  width: 50%;
+  height: auto;
+  z-index: 9999;
   
 }
 
@@ -230,7 +226,7 @@
   height: auto;
   animation: wave 2s infinite ease-in-out;
   transition: transform 0.3s ease;
-  z-index: 10;
+  z-index: 99999;
 }
 
 .interactive-image:hover {
