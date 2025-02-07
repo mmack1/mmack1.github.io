@@ -134,6 +134,7 @@
                 fetch(scriptURL, { method: "POST", body: requestBody })
                   .then((response) => {
                     document.body.classList.add("sent");
+                    waveImage.style.display = "none"; 
                     submitButton.disabled = false;
                   })
                   .catch((error) => {
