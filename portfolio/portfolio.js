@@ -55,3 +55,17 @@ document.addEventListener('DOMContentLoaded', function() {
   
     processImages();
 });
+
+<script>
+  // Select all "See More" buttons
+  document.querySelectorAll('.see-more-btn').forEach(button => {
+    button.addEventListener('click', () => {
+      const fullDesc = button.nextElementSibling;  // Get the associated full description
+      const isVisible = fullDesc.style.display === 'block';
+
+      // Toggle the visibility of the full description
+      fullDesc.style.display = isVisible ? 'none' : 'block';
+      button.textContent = isVisible ? 'See More' : 'See Less';  // Change the button text
+    });
+  });
+</script>

@@ -131,3 +131,39 @@ body {
         grid-template-columns: 1fr;
     }
 }
+
+
+
+.short-desc {
+    margin-bottom: 10px;
+    color: #555;
+    font-size: 1rem;
+  }
+  
+  .see-more-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 5px 15px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  .see-more-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  .full-desc {
+    margin-top: 10px;
+    color: #333;
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+  
+  .full-desc img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+  }
+  
