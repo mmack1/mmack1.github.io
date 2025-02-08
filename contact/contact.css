@@ -222,7 +222,7 @@
 
 /* Wave Image styling */
 .wave-image {
-  width: 20vw; /* Adjust width based on viewport */
+  width: 15vw; /* Adjust width based on viewport */
   max-width: 100%; /* Make sure the image doesn't overflow the container */
   height: auto; /* Maintain aspect ratio */
   transition: transform 0.3s ease;
