@@ -217,10 +217,10 @@
   z-index: 10000;
   /* object-position: left bottom;
   float:left; */
-  position: relative;
+  position: absolute;
   left: 3em;
   right: 4em;
-  top: 1em;
+  bottom: 2em;
   margin: auto;
   
 } 
