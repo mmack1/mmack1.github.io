@@ -5,8 +5,7 @@ body {
     margin: 0;
     padding: 0;
     background-image: linear-gradient(to top, #12314c, #44b1e4, #b6d8f6); /* Gradient from dark blue to light blue */
-    background-repeat: no-repeat; /* No repetition of the background */
-    background-size: cover; /* Ensures the gradient covers the whole page */
+    /* background-size: cover */; /* Ensures the gradient covers the whole page */
     
 }
 
