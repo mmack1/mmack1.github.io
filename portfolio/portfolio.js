@@ -17,19 +17,33 @@ document.addEventListener('DOMContentLoaded', function() {
         });
 
     // Loop through each button and add an event listener
-    seeMoreButtons.forEach(button => {
+    buttons.forEach(button => {
         button.addEventListener('click', function() {
-            const fullDesc = button.nextElementSibling;  // Get the associated full description div
-            const isVisible = fullDesc.style.display === 'block';  // Check if it's already visible
-            
+            const projectItem = button.closest('.project-item');  // Get the parent .project-item element
+            const fullDesc = projectItem.querySelector('.full-description');  // Get the full description element
+
+            // Toggle the expanded class on the clicked project item
+            projectItem.classList.toggle('expanded');
+
             // Toggle the visibility of the full description
-            fullDesc.style.display = isVisible ? 'none' : 'block';
-            
-            // Change the button text based on the visibility state
-            button.textContent = isVisible ? 'See More' : 'See Less';  // Toggle between 'See More' and 'See Less'
+            const isVisible = fullDesc.style.display === 'block';
+            fullDesc.style.display = isVisible ? 'none' : 'block';  // Toggle visibility
+
+            // Toggle button text based on visibility
+            button.textContent = isVisible ? 'See More' : 'See Less';
+
+            // Optionally collapse other items when one is expanded
+            const expandedItems = document.querySelectorAll('.project-item.expanded');
+            expandedItems.forEach(expandedItem => {
+                if (expandedItem !== projectItem) {
+                    expandedItem.classList.remove('expanded');
+                    expandedItem.querySelector('.full-description').style.display = 'none';
+                    expandedItem.querySelector('.see-more-btn').textContent = 'See More';
+                }
+            });
         });
     });
-    });
+});
   
     // Hover effect for project items
     projectItems.forEach(item => {
