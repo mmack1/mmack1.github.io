@@ -209,16 +209,47 @@
   }
 }
 
+/* Wrap the wave image and ensure it stays inside the container */
+.wave-container {
+  position: relative;
+  width: 100%; /* Full width of the parent container */
+  height: auto; /* Adjust the height based on content */
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: flex-end; /* Align it at the bottom of the container */
+  z-index: 10; /* Ensure it's on top if needed */
+}
+
+/* Wave Image styling */
 .wave-image {
-  width: 30vh;
-  height: auto;
-  animation: wave 2s infinite ease-in-out;
+  width: 20vw; /* Adjust width based on viewport */
+  max-width: 100%; /* Make sure the image doesn't overflow the container */
+  height: auto; /* Maintain aspect ratio */
   transition: transform 0.3s ease;
-  z-index: 10000;
-  position:relative;
-  float: left;
-  bottom: 22vh;
-} 
+  position: absolute;
+  bottom: 0; /* Stick it to the bottom of the container */
+  padding-bottom: 5px; 
+  left: 0;
+  z-index: 5;
+  animation: wave 2s infinite ease-in-out;
+}
+
+/* Prevent the image from exceeding the form container size */
+@media only screen and (max-width: 768px) {
+  .wave-image {
+    width: 20vw; /* Larger on smaller screens */
+    max-height: auto; /* Prevent it from becoming too tall */
+    padding-right: 12px;
+  }
+}
+
+/* Adjust wave for extra large screens with long aspect ratio */
+@media (min-width: 1200px) and (max-height: 800px) {
+  .wave-image {
+    width: 15vw; /* Reduce width for wider screens */
+    max-height: auto; /* Keep the height small */
+  }
+}
 
 
 @keyframes wave {
