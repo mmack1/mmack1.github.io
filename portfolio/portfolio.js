@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     const filterButtons = document.querySelectorAll('.filter-btn');
     const projectItems = document.querySelectorAll('.project-item');
+    const seeMoreButtons = document.querySelectorAll('.see-more-btn');
   
     filterButtons.forEach(button => {
         button.addEventListener('click', function() {
@@ -14,6 +15,20 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             });
         });
+
+    // Loop through each button and add an event listener
+    seeMoreButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const fullDesc = button.nextElementSibling;  // Get the associated full description div
+            const isVisible = fullDesc.style.display === 'block';  // Check if it's already visible
+            
+            // Toggle the visibility of the full description
+            fullDesc.style.display = isVisible ? 'none' : 'block';
+            
+            // Change the button text based on the visibility state
+            button.textContent = isVisible ? 'See More' : 'See Less';  // Toggle between 'See More' and 'See Less'
+        });
+    });
     });
   
     // Hover effect for project items
@@ -55,16 +70,4 @@ document.addEventListener('DOMContentLoaded', function() {
   
     processImages();
 });
-
-  // Select all "See More" buttons
-document.querySelectorAll('.see-more-btn').forEach(button => {
-    button.addEventListener('click', () => {
-    const fullDesc = button.nextElementSibling;  // Get the associated full description
-    const isVisible = fullDesc.style.display === 'block';
-
-      // Toggle the visibility of the full description
-    fullDesc.style.display = isVisible ? 'none' : 'block';
-    button.textContent = isVisible ? 'See More' : 'See Less';  // Change the button text
-    });
-  });
 
