@@ -218,9 +218,9 @@
   /* object-position: left bottom;
   float:left; */
   position: absolute;
-  left: 3em;
+  left: 0;
   right: 4em;
-  bottom: 2em;
+  top: 2em;
   margin: auto;
   
 } 
