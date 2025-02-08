@@ -67,7 +67,6 @@
   }
   .side {
     height: 12rem;
-    position: relative;
     background-color: #fcfcf8;
     outline: 1px solid transparent;
     &:nth-of-type(1) {
@@ -80,8 +79,7 @@
       border-radius: 0 0 1rem 1rem;
       box-shadow: 0 0.3rem 0.3rem rgba(0, 0, 0, 0.05), inset 0 -0.57rem 2rem rgba(229, 225, 187, 0.5);
       text-align: right;
-    }
-    
+    }  
     
 }
   .envelope {
@@ -178,7 +176,6 @@
   }
   @keyframes fadeInEnvelope {
     0% {opacity: 0; transform: translateY(8rem);}
-    /*90% {opacity: 1; transform: translateY(4rem);}*/
     100% {opacity: 1; transform: translateY(4.5rem);}
   }
   @keyframes scaleLetter {
