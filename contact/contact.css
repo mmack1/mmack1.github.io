@@ -210,14 +210,18 @@
 }
 
 .wave-image {
-  width: 100%;
-  position:absolute;
+  width: 50%;
   height: auto;
   animation: wave 2s infinite ease-in-out;
   transition: transform 0.3s ease;
   z-index: 10000;
-  object-position: left bottom;
-  float:left;
+  /* object-position: left bottom;
+  float:left; */
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  margin: auto;
   
 } 
 
