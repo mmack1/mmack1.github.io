@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
 
     // Loop through each button and add an event listener
-    buttons.forEach(button => {
+    seeMoreButtons.forEach(button => {
         button.addEventListener('click', function() {
             const projectItem = button.closest('.project-item');  // Get the parent .project-item element
             const fullDesc = projectItem.querySelector('.full-description');  // Get the full description element
