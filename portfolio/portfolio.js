@@ -51,28 +51,28 @@ document.addEventListener('DOMContentLoaded', function() {
             });
             });
 
+            
     // Loop through each button and add an event listener
-    seeMoreButtons.forEach(button => {
+    document.querySelectorAll('.see-more-btn').forEach(button => {
         button.addEventListener('click', function() {
             const projectItem = button.closest('.project-item');  // Get the parent .project-item element
-            const fullDesc = projectItem.querySelector('.full-description');  // Get the full description element
-
+            const fullDesc = projectItem.querySelector('.full-desc');  // Get the full description element
+    
             // Toggle the expanded class on the clicked project item
             projectItem.classList.toggle('expanded');
-
+    
             // Toggle the visibility of the full description
             const isVisible = fullDesc.style.display === 'block';
             fullDesc.style.display = isVisible ? 'none' : 'block';  // Toggle visibility
-
+    
             // Toggle button text based on visibility
             button.textContent = isVisible ? 'See More' : 'See Less';
-
+    
             // Optionally collapse other items when one is expanded
-            const expandedItems = document.querySelectorAll('.project-item.expanded');
-            expandedItems.forEach(expandedItem => {
+            document.querySelectorAll('.project-item.expanded').forEach(expandedItem => {
                 if (expandedItem !== projectItem) {
                     expandedItem.classList.remove('expanded');
-                    expandedItem.querySelector('.full-description').style.display = 'none';
+                    expandedItem.querySelector('.full-desc').style.display = 'none';
                     expandedItem.querySelector('.see-more-btn').textContent = 'See More';
                 }
             });
