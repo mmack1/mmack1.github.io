@@ -52,6 +52,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initially hide the exit and info elements
     infoCards.forEach(card => {
         const exitButton = card.querySelector(".exit");
+        const icon = card.querySelector(".")
         if (exitButton) exitButton.style.display = "none"; // hide the exit button initially
     });
 
