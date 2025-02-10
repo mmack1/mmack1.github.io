@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     const infoCards = document.querySelectorAll(".info-card");
-    let open = true;  // Start with open being false
+    let open = false;  // Start with open being false
+    let needToOpen = true;
 
     // Initially hide the exit and info elements
     infoCards.forEach(card => {
@@ -16,11 +17,12 @@ document.addEventListener('DOMContentLoaded', function() {
         card.addEventListener("click", function() {
             const exitButton = card.querySelector(".exit");
 
-            if (open) {
+            if (needToOpen) {
+                open = true;
+                needToOpen = false;
                 // Remove 'full' class from siblings
                 const siblings = Array.from(card.parentElement.children).filter(child => child !== card);
                 siblings.forEach(sibling => sibling.classList.remove("full"));
-                siblings.forEach(sibling => sibling.classList.add("side"));
 
                 // Add 'full' class to the clicked project item
                 card.classList.add("full");
@@ -33,8 +35,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (exitButton) exitButton.style.display = "inline";
                 if (info) info.style.display = "block";
 
-                open = false;  // Toggle the open state to false after opening
+                  // Toggle the open state to false after opening
             } else {
+                open = false;
+                needToOpen = true;
                 // Remove 'full' and 'side' class from the clicked item
                 card.classList.remove("full");
                 card.classList.remove("side");
@@ -50,8 +54,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 // Hide the 'exit' button and the '.info' element
                 if (exitButton) exitButton.style.display = "none";
                 if (info) info.style.display = "none";
-
-                open = true;  // Toggle the open state to true after closing
             }
         });
     });
