@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
     infoCards.forEach(card => {
         card.addEventListener("click", function() {
             const exitButton = card.querySelector(".exit");
+            const info = card.querySelector(".info");
 
             if (needToOpen) {
                 console.log("if");
