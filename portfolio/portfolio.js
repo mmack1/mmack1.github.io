@@ -52,7 +52,6 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initially hide the exit and info elements
     infoCards.forEach(card => {
         const exitButton = card.querySelector(".exit");
-        const icon = card.querySelector(".")
         if (exitButton) exitButton.style.display = "none"; // hide the exit button initially
     });
 
@@ -62,6 +61,7 @@ document.addEventListener('DOMContentLoaded', function() {
         card.addEventListener("click", function() {
             const exitButton = card.querySelector(".exit");
             const info = card.querySelector(".info");
+            const begin = card.querySelector(".begin");
 
             if (needToOpen) {
                 console.log("if");
@@ -85,6 +85,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 // Show the 'exit' button and the '.info' element
                 if (exitButton) exitButton.style.display = "inline";
                 if (info) info.style.display = "block";
+                if (begin) begin.style.display = "none";
 
                   // Toggle the open state to false after opening
             } else {
@@ -106,6 +107,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 // Hide the 'exit' button and the '.info' element
                 if (exitButton) exitButton.style.display = "none";
                 if (info) info.style.display = "none";
+                if (begin) begin.style.display = "block";
             }
         });
     });

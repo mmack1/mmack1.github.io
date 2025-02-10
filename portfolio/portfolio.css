@@ -218,7 +218,11 @@ body {
     transform: translateX(-50%);
     animation: fadeIn 1s;
 }
-  
+  .begin {
+    position: absolute;
+    display: block;
+
+  }
 /*   .info-card .info {
     position: absolute;
     left: 50%;
