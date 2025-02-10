@@ -18,6 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const exitButton = card.querySelector(".exit");
 
             if (needToOpen) {
+                console.log("if");
                 open = true;
                 needToOpen = false;
                 // Remove 'full' class from siblings
@@ -41,6 +42,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
                   // Toggle the open state to false after opening
             } else {
+                console.log("else");
                 open = false;
                 needToOpen = true;
                 // Remove 'full' and 'side' class from the clicked item
