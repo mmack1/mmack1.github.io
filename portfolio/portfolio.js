@@ -173,7 +173,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 // Remove 'full' and 'side' class from the clicked item and its siblings
                 card.classList.remove("full");
                 card.classList.remove("side");
-                const siblings = Array.from(card.parentElement.children).filter(child => child !== projectItem);
+                const siblings = Array.from(card.parentElement.children).filter(child => child !== card);
                 siblings.classList.remove("full");
 
                 // Hide the 'exit' button and the '.info' element
