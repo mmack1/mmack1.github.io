@@ -139,79 +139,48 @@
   
     processImages();
 }); */
+document.querySelectorAll('.info').forEach(item => item.style.display = 'none'); // Hide .info elements
+document.querySelectorAll('.exit').forEach(item => item.style.display = 'none'); // Hide .exit elements
 
-document.addEventListener('DOMContentLoaded', function() {
-    const filterButtons = document.querySelectorAll('.filter-btn');
-    const projectItems = document.querySelectorAll('.project-item');
-    const exitButtons = document.querySelectorAll(".exit");
-    const infoElements = document.querySelectorAll(".info");
-    const infoCards = document.querySelectorAll(".info-card");
-    let open = true;
+let open = true;
 
-    filterButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            const category = this.dataset.category;
+document.querySelectorAll('.info-card').forEach(card => {
+    card.addEventListener('click', function() {
+        if (open) {
+            // Remove 'full' and add 'side' class to siblings
+            Array.from(card.parentElement.children).forEach(sibling => {
+                if (sibling !== card) {
+                    sibling.classList.remove('full');
+                    sibling.classList.add('side');
+                }
+            });
+            
+            // Add 'full' to the clicked card and remove 'side'
+            card.classList.add('full');
+            card.classList.remove('side');
 
-            // When 'All' is clicked, reset display for all items
-            if (category === 'all') {
-                projectItems.forEach(item => {
-                    item.style.display = 'block'; // Show all project items
-                });
-            } else {
-                projectItems.forEach(item => {
-                    // Show only items belonging to the selected category
-                    if (item.classList.contains(category)) {
-                        item.style.display = 'block';
-                    } else {
-                        item.style.display = 'none';
-                    }
-                });
-            }
-        });
-    });
+            // Show the .exit element inside the clicked card
+            card.querySelector('.exit').style.display = 'inline';
 
-    // Initially hide the exit and info elements
-    exitButtons.forEach(button => button.style.display = "none");
-    infoElements.forEach(info => info.style.display = "none");
+            // Show .info element
+            document.querySelector('.info').style.display = 'block';
 
-    infoCards.forEach(card => {
-        card.addEventListener("click", function() {
-            const projectItem = this; // This refers to the clicked .info-card
+            open = false; // Toggle the 'open' state
+        } else {
+            // Reset all card states and hide .info and .exit
+            Array.from(card.parentElement.children).forEach(sibling => {
+                sibling.classList.remove('full');
+                sibling.classList.remove('side');
+            });
 
-            if (open) {
-                // Remove 'full' class from siblings
-                const siblings = Array.from(projectItem.parentElement.children).filter(child => child !== projectItem);
-                siblings.forEach(sibling => sibling.classList.remove("full"));
+            card.classList.remove('full');
+            card.classList.remove('side');
 
-                // Add 'full' class to the clicked project item
-                projectItem.classList.add("full");
+            card.querySelector('.exit').style.display = 'none';
 
-                // Remove 'side' class from clicked item and add to siblings
-                projectItem.classList.remove("side");
-                siblings.forEach(sibling => sibling.classList.add("side"));
+            document.querySelector('.info').style.display = 'none';
 
-                // Show the 'exit' button and the '.info' element
-                const exitButton = projectItem.querySelector(".exit");
-                if (exitButton) exitButton.style.display = "inline";
-
-                const info = document.querySelector(".info");
-                if (info) info.style.display = "block";
-
-                open = !open;  // Toggle the open state
-            } else {
-                // Remove 'full' and 'side' class from the clicked item and its siblings
-                projectItem.classList.remove("full");
-                projectItem.classList.remove("side");
-
-                // Hide the 'exit' button and the '.info' element
-                const exitButton = projectItem.querySelector(".exit");
-                if (exitButton) exitButton.style.display = "none";
-
-                const info = document.querySelector(".info");
-                if (info) info.style.display = "none";
-
-                open = !open;  // Toggle the open state
-            }
-        });
+            open = true; // Toggle the 'open' state
+        }
     });
 });
