@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     const infoCards = document.querySelectorAll(".info-card");
-    let open = false;  // Start with open being false
+    let open = true;  // Start with open being false
 
     // Initially hide the exit and info elements
     infoCards.forEach(card => {
@@ -20,6 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 // Remove 'full' class from siblings
                 const siblings = Array.from(card.parentElement.children).filter(child => child !== card);
                 siblings.forEach(sibling => sibling.classList.remove("full"));
+                siblings.forEach(sibling => sibling.classList.add("side"));
 
                 // Add 'full' class to the clicked project item
                 card.classList.add("full");
