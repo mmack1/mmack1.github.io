@@ -20,12 +20,22 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
 
-    
             // Loop through each button and add an event listener
-    seeMore.forEach(button => {
-        button.addEventListener('click', function() {
-            const projectItem = button.closest('.project-item');  // Get the parent .project-item element
+    /* seeMore.forEach(button => {
+        button.addEventListener('click', function() { */
+        projects.forEach(card => {
+            card.addEventListener("click", function() {
+            /* const projectItem = button.closest('.project-item');  */ // Get the parent .project-item element
+            const projectItem = this; 
             const fullDesc = projectItem.querySelector('.full-description');  // Get the full description element
+            const siblings = Array.from(projectItem.parentElement.children).filter(child => child !== card);
+            siblings.forEach(sibling => {
+                sibling.classList.remove("project-item");
+                sibling.style.display = "none";  // Set display to 'block' for side cards
+            });
+
+
+
 
             // Toggle the expanded class on the clicked project item
             projectItem.classList.toggle('expanded');

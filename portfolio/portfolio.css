@@ -147,12 +147,12 @@ body {
     line-height: 1.5;
   }
   
-  .full-desc img {
+  .full-desc .img {
     width: 50%; /* Adjust size of the image */
     height: auto;
     margin-top: 10px;
   }
-  
+
   .project-item.expanded {
     width: 600px;  /* Expanding the width */
     height: auto;  /* Adjust height to fit content */
