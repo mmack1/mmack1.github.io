@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     const filterButtons = document.querySelectorAll('.filter-btn');
     const projectItems = document.querySelectorAll('.project-item');
-    const seeMoreButtons = document.querySelectorAll('.see-more-btn');
+    /* const seeMoreButtons = document.querySelectorAll('.see-more-btn'); */
   
     filterButtons.forEach(button => {
         button.addEventListener('click', function() {
@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
             
     // Loop through each button and add an event listener
-    document.querySelectorAll('.see-more-btn').forEach(button => {
+  /*   document.querySelectorAll('.see-more-btn').forEach(button => {
         button.addEventListener('click', function() {
             const projectItem = button.closest('.project-item');  // Get the parent .project-item element
             const fullDesc = projectItem.querySelector('.full-desc');  // Get the full description element
@@ -77,7 +77,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             });
         });
-    }); 
+ */   
+/*  });  */
 });
   
 
