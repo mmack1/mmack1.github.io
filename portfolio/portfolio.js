@@ -168,6 +168,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 const info = document.querySelector(".info");
                 if (info) info.style.display = "block";
+                open = !open;  
             } else {
                 // Remove 'full' and 'side' class from the clicked item and its siblings
                 card.classList.remove("full");
