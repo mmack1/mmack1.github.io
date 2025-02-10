@@ -173,6 +173,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 // Remove 'full' and 'side' class from the clicked item and its siblings
                 card.classList.remove("full");
                 card.classList.remove("side");
+                const cards = document.querySelectorAll(".info-card")
                 const sides = cards.querySelector(".side");
                 if (sides) sides.style.display = "block";
 
