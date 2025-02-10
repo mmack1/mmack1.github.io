@@ -9,8 +9,6 @@ document.addEventListener('DOMContentLoaded', function() {
         if (exitButton) exitButton.style.display = "none"; // hide the exit button initially
     });
 
-    const info = document.querySelector(".info");
-    if (info) info.style.display = "none"; // hide the .info initially
 
     // Set up event listeners for each card
     infoCards.forEach(card => {
