@@ -22,14 +22,18 @@ document.addEventListener('DOMContentLoaded', function() {
                 needToOpen = false;
                 // Remove 'full' class from siblings
                 const siblings = Array.from(card.parentElement.children).filter(child => child !== card);
-                siblings.forEach(sibling => sibling.classList.remove("full"));
+
+                siblings.forEach(sibling => {
+                    sibling.classList.remove("full");
+                    sibling.classList.add("side");
+                    sibling.style.display = "none";  // Set display to 'block' for side cards
+                });
 
                 // Add 'full' class to the clicked project item
                 card.classList.add("full");
 
                 // Remove 'side' class from clicked item and add to siblings
                 card.classList.remove("side");
-                siblings.forEach(sibling => sibling.classList.add("side"));
 
                 // Show the 'exit' button and the '.info' element
                 if (exitButton) exitButton.style.display = "inline";
