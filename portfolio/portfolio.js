@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
     seeMore.forEach(button => {
         button.addEventListener('click', function() {
             const projectItem = button.closest('.project-item');  // Get the parent .project-item element
-            const fullDesc = projectItem.querySelector('.full-description');  // Get the full description element
+            const fullDesc = projectItem.querySelector('.full-desc');  // Get the full description element
 
             // Toggle the expanded class on the clicked project item
             projectItem.classList.toggle('expanded');
@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function() {
             expandedItems.forEach(expandedItem => {
                 if (expandedItem !== projectItem) {
                     expandedItem.classList.remove('expanded');
-                    expandedItem.querySelector('.full-description').style.display = 'none';
+                    expandedItem.querySelector('.full-desc').style.display = 'none';
                     expandedItem.querySelector('.see-more-btn').textContent = 'See More';
                 }
             });
