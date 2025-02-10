@@ -139,48 +139,51 @@
   
     processImages();
 }); */
-document.querySelectorAll('.info').forEach(item => item.style.display = 'none'); // Hide .info elements
-document.querySelectorAll('.exit').forEach(item => item.style.display = 'none'); // Hide .exit elements
 
-let open = true;
+document.addEventListener('DOMContentLoaded', function() {
+    const infoCards = document.querySelectorAll(".info-card");
+    let open = true;
 
-document.querySelectorAll('.info-card').forEach(card => {
-    card.addEventListener('click', function() {
-        if (open) {
-            // Remove 'full' and add 'side' class to siblings
-            Array.from(card.parentElement.children).forEach(sibling => {
-                if (sibling !== card) {
-                    sibling.classList.remove('full');
-                    sibling.classList.add('side');
-                }
-            });
-            
-            // Add 'full' to the clicked card and remove 'side'
-            card.classList.add('full');
-            card.classList.remove('side');
 
-            // Show the .exit element inside the clicked card
-            card.querySelector('.exit').style.display = 'inline';
+    // Initially hide the exit and info elements
 
-            // Show .info element
-            document.querySelector('.info').style.display = 'block';
+    infoCards.forEach(card => {
+        card.addEventListener("click", function() {
 
-            open = false; // Toggle the 'open' state
-        } else {
-            // Reset all card states and hide .info and .exit
-            Array.from(card.parentElement.children).forEach(sibling => {
-                sibling.classList.remove('full');
-                sibling.classList.remove('side');
-            });
+            if (open) {
+                // Remove 'full' class from siblings
+                const siblings = Array.from(card.parentElement.children).filter(child => child !== card);
+                siblings.forEach(sibling => sibling.classList.remove("full"));
 
-            card.classList.remove('full');
-            card.classList.remove('side');
+                // Add 'full' class to the clicked project item
+                card.classList.add("full");
 
-            card.querySelector('.exit').style.display = 'none';
+                // Remove 'side' class from clicked item and add to siblings
+                card.classList.remove("side");
+                siblings.forEach(sibling => sibling.classList.add("side"));
 
-            document.querySelector('.info').style.display = 'none';
+                // Show the 'exit' button and the '.info' element
+                const exitButton = card.querySelector(".exit");
+                if (exitButton) exitButton.style.display = "inline";
 
-            open = true; // Toggle the 'open' state
-        }
+                const info = document.querySelector(".info");
+                if (info) info.style.display = "block";
+            } else {
+                // Remove 'full' and 'side' class from the clicked item and its siblings
+                card.classList.remove("full");
+                card.classList.remove("side");
+                const siblings = Array.from(card.parentElement.children).filter(child => child !== projectItem);
+                siblings.classList.remove("full");
+
+                // Hide the 'exit' button and the '.info' element
+                const exitButton = card.querySelector(".exit");
+                if (exitButton) exitButton.style.display = "none";
+
+                const info = document.querySelector(".info");
+                if (info) info.style.display = "none";
+
+                open = !open;  // Toggle the open state
+            }
+        });
     });
 });
