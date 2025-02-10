@@ -175,6 +175,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 card.classList.remove("side");
                 const cards = document.querySelectorAll(".info-card")
                 if (cards) cards.style.display = "block";
+                const sides = cards.querySelector(".side");
+                if (sides) sides.style.display = "block";
 
                 // Hide the 'exit' button and the '.info' element
                 const exitButton = card.querySelector(".exit");
