@@ -168,7 +168,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 const info = document.querySelector(".info");
                 if (info) info.style.display = "block";
-                open = !open;  
+                open = false;  
             } else {
                 // Remove 'full' and 'side' class from the clicked item and its siblings
                 card.classList.remove("full");
@@ -183,7 +183,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 const info = document.querySelector(".info");
                 if (info) info.style.display = "none";
 
-                open = !open;  // Toggle the open state
+                open = true;  // Toggle the open state
             }
         });
     });
