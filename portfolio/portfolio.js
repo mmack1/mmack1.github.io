@@ -1,13 +1,13 @@
-document.addEventListener('DOMContentLoaded', function() {
+/* document.addEventListener('DOMContentLoaded', function() {
     const filterButtons = document.querySelectorAll('.filter-btn');
     const projectItems = document.querySelectorAll('.project-item');
     const exitButtons = document.querySelectorAll(".exit");
     const infoElements = document.querySelectorAll(".info");
     const infoCards = document.querySelectorAll(".info-card");
-    let open = true;
+    let open = true; */
     /* const seeMoreButtons = document.querySelectorAll('.see-more-btn'); */
   
-    filterButtons.forEach(button => {
+/*     filterButtons.forEach(button => {
         button.addEventListener('click', function() {
             const category = this.dataset.category;
   
@@ -18,12 +18,12 @@ document.addEventListener('DOMContentLoaded', function() {
                     item.style.display = 'none';
                 }
             });
-        });
+        }); */
 
     // Initially hide the exit and info elements
         /* document.querySelectorAll(".exit").forEach(exit => exit.style.display = "none");
         document.querySelectorAll(".info").forEach(info => info.style.display = "none"); */
-
+/* 
         exitButtons.forEach(button => button.style.display = "none");
         infoElements.forEach(info => info.style.display = "none");
 
@@ -67,11 +67,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             });
         });
-    });
+    }); */
 
             
     // Loop through each button and add an event listener
-    document.querySelectorAll('.see-more-btn').forEach(button => {
+/*     document.querySelectorAll('.see-more-btn').forEach(button => {
         button.addEventListener('click', function() {
             const projectItem = button.closest('.project-item');  // Get the parent .project-item element
             const fullDesc = projectItem.querySelector('.full-desc');  // Get the full description element
@@ -96,12 +96,12 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
      }); 
-  
+   */
 
 
 
     // Hover effect for project items
-    projectItems.forEach(item => {
+/*     projectItems.forEach(item => {
         const moreInfo = item.querySelector('.more-info');
         if (moreInfo) {
             item.addEventListener('mouseenter', () => {
@@ -114,10 +114,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 moreInfo.style.visibility = 'hidden';
             });
         }
-    });
+    }); */
   
     // Process images
-    async function processImages() {
+ /*    async function processImages() {
         const imgElements = document.querySelectorAll('.more-info img');
   
         imgElements.forEach(img => {
@@ -138,5 +138,82 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   
     processImages();
+}); */
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const projectItems = document.querySelectorAll('.project-item');
+    const exitButtons = document.querySelectorAll(".exit");
+    const infoElements = document.querySelectorAll(".info");
+    const infoCards = document.querySelectorAll(".info-card");
+    let open = true;
+
+    filterButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const category = this.dataset.category;
+
+            projectItems.forEach(item => {
+                if (category === 'all' || item.classList.contains(category)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+
+        // Initially hide the exit and info elements
+        exitButtons.forEach(button => button.style.display = "none");
+        infoElements.forEach(info => info.style.display = "none");
+
+        infoCards.forEach(card => {
+            card.addEventListener("click", function() {
+                const projectItem = this; // This refers to the clicked .info-card
+
+                if (open) {
+                    // Remove 'full' class from siblings
+                    const siblings = Array.from(projectItem.parentElement.children).filter(child => child !== projectItem);
+                    siblings.forEach(sibling => sibling.classList.remove("full"));
+                    
+                    // Add 'full' class to the clicked project item
+                    projectItem.classList.add("full");
+
+                    // Remove 'side' class from clicked item and add to siblings
+                    projectItem.classList.remove("side");
+                    siblings.forEach(sibling => sibling.classList.add("side"));
+
+                    // Show the 'exit' button and the '.info' element
+                    const exitButton = projectItem.querySelector(".exit");
+                    if (exitButton) exitButton.style.display = "inline";
+
+                    const info = projectItem.querySelector(".info");
+                    if (info) info.style.display = "block";
+
+                    open = false;  // Toggle the open state to false
+                } else {
+                    // Remove 'full' and 'side' class from the clicked item and its siblings
+                    projectItem.classList.remove("full");
+                    projectItem.classList.remove("side");
+
+                    // Hide the 'exit' button and the '.info' element
+                    const exitButton = projectItem.querySelector(".exit");
+                    if (exitButton) exitButton.style.display = "none";
+
+                    const info = projectItem.querySelector(".info");
+                    if (info) info.style.display = "none";
+
+                    open = true;  // Toggle the open state back to true
+                }
+
+                // Reset other cards to be visible
+                infoCards.forEach(card => {
+                    if (!card.classList.contains("full")) {
+                        card.style.display = 'block'; // Show all cards again if they are not "full"
+                    }
+                });
+            });
+        });
+    });
 });
+
 

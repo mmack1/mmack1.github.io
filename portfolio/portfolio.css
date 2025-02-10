@@ -243,6 +243,10 @@ html, body {
     font-size: 3em;
     display: none;
   }
+
+  .info {
+    display: none; /* Start with all .info elements hidden */
+}
   
   .info-card .info {
     position: absolute;
@@ -250,7 +254,6 @@ html, body {
     transform: translateX(-50%);
     animation: fadeIn 1s;
     display: none;
-    opacity: 1;
   }
   
   .info-card .info h1 {
