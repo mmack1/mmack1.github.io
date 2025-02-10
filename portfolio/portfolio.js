@@ -20,22 +20,12 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
 
+    
             // Loop through each button and add an event listener
-    /* seeMore.forEach(button => {
-        button.addEventListener('click', function() { */
-        projects.forEach(card => {
-            card.addEventListener("click", function() {
-            /* const projectItem = button.closest('.project-item');  */ // Get the parent .project-item element
-            const projectItem = this; 
+    seeMore.forEach(button => {
+        button.addEventListener('click', function() {
+            const projectItem = button.closest('.project-item');  // Get the parent .project-item element
             const fullDesc = projectItem.querySelector('.full-description');  // Get the full description element
-            const siblings = Array.from(projectItem.parentElement.children).filter(child => child !== card);
-            siblings.forEach(sibling => {
-                sibling.classList.remove("project-item");
-                sibling.style.display = "none";  // Set display to 'block' for side cards
-            });
-
-
-
 
             // Toggle the expanded class on the clicked project item
             projectItem.classList.toggle('expanded');
@@ -122,25 +112,25 @@ document.addEventListener('DOMContentLoaded', function() {
 
  
 
-async function processImages() {
-    const imgElements = document.querySelectorAll('.more-info img');
+    async function processImages() {
+        const imgElements = document.querySelectorAll('.more-info img');
 
-    imgElements.forEach(img => {
-        setElementStyles(img, {
-            'flex-shrink': '0',
-            'align-self': 'flex-start',
-            'min-height': 'fit-content',
-            'max-width': '100%',
-            'display': 'block'
+        imgElements.forEach(img => {
+            setElementStyles(img, {
+                'flex-shrink': '0',
+                'align-self': 'flex-start',
+                'min-height': 'fit-content',
+                'max-width': '100%',
+                'display': 'block'
+            });
         });
-    });
-}
-
-function setElementStyles(element, styles) {
-    for (let property in styles) {
-        element.style[property] = styles[property];
     }
-}
 
-processImages();
+    function setElementStyles(element, styles) {
+        for (let property in styles) {
+            element.style[property] = styles[property];
+        }
+    }
+
+    processImages();
 });
