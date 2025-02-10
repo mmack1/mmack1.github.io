@@ -1,6 +1,10 @@
 document.addEventListener('DOMContentLoaded', function() {
     const filterButtons = document.querySelectorAll('.filter-btn');
     const projectItems = document.querySelectorAll('.project-item');
+    const exitButtons = document.querySelectorAll(".exit");
+    const infoElements = document.querySelectorAll(".info");
+    const infoCards = document.querySelectorAll(".info-card");
+    let open = true;
     /* const seeMoreButtons = document.querySelectorAll('.see-more-btn'); */
   
     filterButtons.forEach(button => {
@@ -17,39 +21,53 @@ document.addEventListener('DOMContentLoaded', function() {
         });
 
     // Initially hide the exit and info elements
-        document.querySelectorAll(".exit").forEach(exit => exit.style.display = "none");
-        document.querySelectorAll(".info").forEach(info => info.style.display = "none");
+        /* document.querySelectorAll(".exit").forEach(exit => exit.style.display = "none");
+        document.querySelectorAll(".info").forEach(info => info.style.display = "none"); */
 
-        let open = true;
+        exitButtons.forEach(button => button.style.display = "none");
+        infoElements.forEach(info => info.style.display = "none");
 
-        document.querySelectorAll(".info-card").forEach(card => {
-        card.addEventListener("click", function() {
-            if (open) {
-            // Remove 'full' and add 'side' to all siblings
-            this.parentElement.querySelectorAll(".info-card").forEach(sibling => sibling.classList.remove("full"));
-            this.classList.add("full");
-            this.classList.remove("side");
-            this.parentElement.querySelectorAll(".info-card").forEach(sibling => sibling.classList.add("side"));
-
-            // Show the exit button for the clicked card
-            this.querySelector(".exit").style.display = "inline";
-
-            // Show the .info content
-            document.querySelectorAll(".info").forEach(info => info.style.display = "block");
-
-            open = !open;
-            } else {
-            // Reset classes for all cards
-            this.parentElement.querySelectorAll(".info-card").forEach(sibling => sibling.classList.remove("full", "side"));
-            
-            // Hide the exit button and .info content
-            this.querySelector(".exit").style.display = "none";
-            document.querySelectorAll(".info").forEach(info => info.style.display = "none");
-
-            open = !open;
+        infoCards.forEach(card => {
+            card.addEventListener("click", function() {
+                const projectItem = this; // This refers to the clicked .info-card
+    
+                if (open) {
+                    // Remove 'full' class from siblings
+                    const siblings = Array.from(projectItem.parentElement.children).filter(child => child !== projectItem);
+                    siblings.forEach(sibling => sibling.classList.remove("full"));
+                    
+                    // Add 'full' class to the clicked project item
+                    projectItem.classList.add("full");
+    
+                    // Remove 'side' class from clicked item and add to siblings
+                    projectItem.classList.remove("side");
+                    siblings.forEach(sibling => sibling.classList.add("side"));
+    
+                    // Show the 'exit' button and the '.info' element
+                    const exitButton = projectItem.querySelector(".exit");
+                    if (exitButton) exitButton.style.display = "inline";
+    
+                    const info = document.querySelector(".info");
+                    if (info) info.style.display = "block";
+    
+                    open = !open;  // Toggle the open state
+                } else {
+                    // Remove 'full' and 'side' class from the clicked item and its siblings
+                    projectItem.classList.remove("full");
+                    projectItem.classList.remove("side");
+    
+                    // Hide the 'exit' button and the '.info' element
+                    const exitButton = projectItem.querySelector(".exit");
+                    if (exitButton) exitButton.style.display = "none";
+    
+                    const info = document.querySelector(".info");
+                    if (info) info.style.display = "none";
+    
+                    open = !open;  // Toggle the open state
                 }
             });
-            });
+        });
+    });
 
             
     // Loop through each button and add an event listener
