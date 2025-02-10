@@ -236,6 +236,11 @@ body {
     margin-left: 0.7em;
     font-size: 5em;
   }
+  .info-card .info img {
+    width: 50%; /* Adjust size of the image */
+    height: auto;
+    margin-top: 10px;
+  }
   
   .info-card.full {
     width: 100%;
