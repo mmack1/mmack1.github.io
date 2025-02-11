@@ -30,6 +30,12 @@ document.addEventListener('DOMContentLoaded', function() {
             // Toggle the expanded class on the clicked project item
             projectItem.classList.toggle('expanded');
 
+            projectItems.forEach(item => {
+                if (item !== projectItem) {
+                    item.style.display = 'none';  // Hide other items
+                }
+            });
+
             // Toggle the visibility of the full description
             const isVisible = fullDesc.style.display === 'block';
             fullDesc.style.display = isVisible ? 'none' : 'block';  // Toggle visibility
@@ -37,7 +43,6 @@ document.addEventListener('DOMContentLoaded', function() {
             // Toggle button text based on visibility
             button.textContent = isVisible ? 'See More' : 'See Less';
 
-            // Optionally collapse other items when one is expanded
             const expandedItems = document.querySelectorAll('.project-item.expanded');
             expandedItems.forEach(expandedItem => {
                 if (expandedItem !== projectItem) {
