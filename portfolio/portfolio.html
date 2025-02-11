@@ -126,7 +126,24 @@
             </div>
           <div class="info">
             <h1>Affirmative Action Study</h1>
-            <p> hello my name is megan</p>
+            <p>The project utilized a rich dataset spanning over 40 years, sourced from the Integrated Postsecondary Education Data System (IPEDS), to investigate the racial and ethnic demographics of students enrolled in U.S. public universities. 
+              The data spans from 1980 to 2021 and includes over 3.5 million rows from institutions across the nation. 
+              This dataset, stored in the file "ipeds_joined.db", contains 20 demographic columns detailing the enrollment by race, ethnicity, and other attributes. 
+              IPEDS data is curated and managed by the National Center for Education Statistics (NCES), a part of the U.S. Department of Education, and is considered a highly reputable 
+              and authoritative source of information on higher education.
+              The dataset had to be meticulously cleaned and standardized, especially considering the challenges that arose from 
+              inconsistent labeling and category changes over the years. For example, categories for race and ethnicity were not always uniform 
+              across years, with certain groups being combined or split over time. 
+              To address these discrepancies, I manually standardized the labels across all years, ensuring consistent categorization. 
+              The cleaning process also involved handling duplicates resulting from multiple surveys within the same year for the same institution. 
+              This was handled by performing aggregation queries, summing demographic data for each institution per year. 
+              Given the political significance of affirmative action, the project aimed to examine how these policies
+              have affected the racial composition of students at public universities in states where affirmative action was banned compared
+              to states that still used it prior to its repeal. Conclusions were made using hypothesis testing and machine learning models 
+              like KNN and Logistic Regression to explore correlations between race-conscious admissions policies and student demographics at public universities.
+              This project could be examined to include more recent developments since June 2023. However, data on this is still being collected.
+              </p>
+              <img src="../images/affirmativeActionPoster.jpg" alt="affirm">
             <span class="exit">x</span>
 
           </div>
