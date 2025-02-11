@@ -95,6 +95,7 @@ body {
     height: auto;
     margin-top: 10px;
   }
+
   
 /* Show original content w/o hover */
 .project-item h3, .project-item p {
@@ -148,7 +149,7 @@ body {
   }
   
   .full-desc .img {
-    width: 50%; /* Adjust size of the image */
+    object-fit: cover;
     height: auto;
     margin-top: 10px;
   }
@@ -247,10 +248,9 @@ body {
     line-height: 1.5;
 }
   .info-card .info img {
-    width: 20%; /* Adjust size of the image */
+    max-width: 70%;
     height: auto;
     margin-top: 10px;
-    margin-inline: 35%
     
   }
   
