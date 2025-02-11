@@ -239,18 +239,20 @@ body {
   .info-card .info h1 {
     color: black;
     margin-left: 0.7em;
-    font-size: 5em;
+    font-size: 1em;
   }
   .info-card .info img {
-    width: 50%; /* Adjust size of the image */
+    width: 20%; /* Adjust size of the image */
     height: auto;
     margin-top: 10px;
   }
   
   .info-card.full {
-    width: 100%;
+    width: 95%;
+    margin-left: 20px;
+    height: auto;
+    position: absolute;
     transition: 0.3s;
-    height: 100vh;
     box-shadow: 0px 0px 0px black;
   }
   
