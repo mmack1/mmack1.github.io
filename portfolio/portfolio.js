@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let open = false;  // Start with open being false
     let needToOpen = true;
     const filterButtons = document.querySelectorAll('.filter-btn');
-    const projectItems = document.querySelectorAll('.project-item');
+    /* const projectItems = document.querySelectorAll('.project-item'); */
     const seeMore = document.querySelectorAll('.see-more-btn');
 
 
@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
         button.addEventListener('click', function() {
             const category = this.dataset.category;
 
-            projectItems.forEach(item => {
+            infoCards.forEach(item => {
                 if (category === 'all' || item.classList.contains(category)) {
                     item.style.display = 'block';
                 } else {
@@ -21,39 +21,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
 
     
-            // Loop through each button and add an event listener
-    seeMore.forEach(button => {
-        button.addEventListener('click', function() {
-            const projectItem = button.closest('.project-item');  // Get the parent .project-item element
-            const fullDesc = projectItem.querySelector('.full-desc');  // Get the full description element
-
-            // Toggle the expanded class on the clicked project item
-            projectItem.classList.toggle('expanded');
-
-            projectItems.forEach(item => {
-                if (item !== projectItem) {
-                    item.style.display = 'none';  // Hide other items
-                }
-            });
-
-            // Toggle the visibility of the full description
-            const isVisible = fullDesc.style.display === 'block';
-            fullDesc.style.display = isVisible ? 'none' : 'block';  // Toggle visibility
-
-            // Toggle button text based on visibility
-            button.textContent = isVisible ? 'See More' : 'See Less';
-
-            const expandedItems = document.querySelectorAll('.project-item.expanded');
-            expandedItems.forEach(expandedItem => {
-                if (expandedItem !== projectItem) {
-                    expandedItem.classList.remove('expanded');
-                    expandedItem.querySelector('.full-desc').style.display = 'none';
-                    expandedItem.querySelector('.see-more-btn').textContent = 'See More';
-                }
-            });
-        });
-    });
-
     // Initially hide the exit and info elements
     infoCards.forEach(card => {
         const exitButton = card.querySelector(".exit");
@@ -140,5 +107,5 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    processImages();
+   /*  processImages(); */
 });

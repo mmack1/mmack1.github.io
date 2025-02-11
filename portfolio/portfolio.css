@@ -4,8 +4,8 @@ body {
     background-color: #f8f9fa;
     margin: 0;
     padding: 0;
-    background-image: linear-gradient(to top, #12314c, #44b1e4, #b6d8f6); /* Gradient from dark blue to light blue */
-    background-size: auto;
+    background-image: repeating-linear-gradient(to top, #12314c, #44b1e4, #b6d8f6); /* Gradient from dark blue to light blue */
+    background-attachment: fixed;
     
 }
 
@@ -202,13 +202,13 @@ body {
 }
 
 .info-card h1 {
-    font-size: 2em;
-    margin: 0; /* Remove default margin */
+   font-size: 1.2rem;
+   margin-bottom: 10px;
 }
 
 .info-card p {
     font-size: 1em;
-    margin: 0; /* Remove default margin */
+    margin-bottom: 10px; /* Remove default margin */
 }
 
 
@@ -217,9 +217,9 @@ body {
   .info-card .info span {
     color: black;
     position: absolute;
-    top: 0;
+    top: -10;
     right: 0;
-    font-size: 2em;
+    font-size: 1.5em;
     display: none;
   }
 
@@ -227,8 +227,8 @@ body {
   .info {
     display: none; /* Start with all .info elements hidden */
     position: relative;
-    text-align: center;
     animation: fadeIn 1s;
+    text-align: left;
 }
   .begin {
     display: block;
@@ -240,10 +240,18 @@ body {
     margin-left: 0.7em;
     font-size: 1em;
   }
+
+.info-card p {
+    font-size: 0.9rem;
+    color: #555;
+    line-height: 1.5;
+}
   .info-card .info img {
     width: 20%; /* Adjust size of the image */
     height: auto;
     margin-top: 10px;
+    margin-inline: 35%
+    
   }
   
   .info-card.full {
