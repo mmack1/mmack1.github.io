@@ -19,7 +19,19 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             });
         });
+    });
 
+ 
+    infoCards.forEach(item => {
+        item.addEventListener('mouseenter', () => {
+           
+            item.classList.add('hovered'); 
+        });
+        item.addEventListener('mouseleave', () => {
+            // Remove the class when the hover ends
+            item.classList.remove('hovered');
+        });
+    });
     
     // Initially hide the exit and info elements
     infoCards.forEach(card => {
@@ -85,6 +97,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+    
  
 
     async function processImages() {
