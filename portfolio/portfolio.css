@@ -259,33 +259,7 @@ body {
     display: none;
   }
   
-  
-  /* Specific nth-child styling */
-  .info-card:nth-child(2) {
-    background: #468966;
-    box-shadow: 3px 4px 3px rgba(70, 152, 102, 0.3); /* shade(#468966, 30%) */
-  }
-  
-  .info-card:nth-child(3) {
-    background: #FFF0A5;
-    box-shadow: 3px 4px 3px rgba(255, 240, 165, 0.3); /* shade(#FFF0A5, 30%) */
-  }
-  
-  .info-card:nth-child(4) {
-    background: #FFB03B;
-    box-shadow: 3px 4px 3px rgba(255, 176, 59, 0.3); /* shade(#FFB03B, 30%) */
-  }
-  
-  .info-card:nth-child(5) {
-    background: #B64926;
-    box-shadow: 3px 4px 3px rgba(182, 73, 38, 0.3); /* shade(#B64926, 30%) */
-  }
-  
-  .info-card:nth-child(6) {
-    background: #8E2800;
-    box-shadow: 3px 4px 3px rgba(142, 40, 0, 0.3); /* shade(#8E2800, 30%) */
-  }
-  
+
   /* Animation (assuming fadeIn is defined somewhere else in your CSS) */
   @keyframes fadeIn {
     0% {
