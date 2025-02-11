@@ -99,26 +99,3 @@ document.addEventListener('DOMContentLoaded', function() {
 
     
  
-
-    async function processImages() {
-        const imgElements = document.querySelectorAll('.more-info img');
-
-        imgElements.forEach(img => {
-            setElementStyles(img, {
-                'flex-shrink': '0',
-                'align-self': 'flex-start',
-                'min-height': 'fit-content',
-                'max-width': '100%',
-                'display': 'block'
-            });
-        });
-    }
-
-    function setElementStyles(element, styles) {
-        for (let property in styles) {
-            element.style[property] = styles[property];
-        }
-    }
-
-   /*  processImages(); */
-});

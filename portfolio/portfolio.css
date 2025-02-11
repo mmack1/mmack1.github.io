@@ -196,9 +196,9 @@ body {
 }
 
 .info-card i {
-  position: absolute;
-  top: 0;
-  right: 0;
+  position: relative;
+  float: right;
+  
 }
 
 .info-card h1 {
