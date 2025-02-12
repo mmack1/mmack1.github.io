@@ -70,8 +70,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (info) info.style.display = "block";
                 if (begin) begin.style.display = "none";
 
-
-                  card.scrollIntoView({ behavior: "smooth", block: "start" });
+                window.scrollTo({ top: 0, behavior: "smooth" })
+                 /*  card.scrollIntoView({ behavior: "smooth", block: "start" }); */
             } else {
                /*  open = false; */
                 needToOpen = true;
