@@ -48,8 +48,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const begin = card.querySelector(".begin");
 
             if (needToOpen) {
-                console.log("if");
-                open = true;
+                /* open = true; */
                 needToOpen = false;
                 // Remove 'full' class from siblings
                 const siblings = Array.from(card.parentElement.children).filter(child => child !== card);
@@ -74,8 +73,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
                   card.scrollIntoView({ behavior: "smooth", block: "start" });
             } else {
-                console.log("else");
-                open = false;
+               /*  open = false; */
                 needToOpen = true;
                 // Remove 'full' and 'side' class from the clicked item
                 card.classList.remove("full");
