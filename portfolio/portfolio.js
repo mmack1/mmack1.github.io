@@ -71,7 +71,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (info) info.style.display = "block";
                 if (begin) begin.style.display = "none";
 
-                  // Toggle the open state to false after opening
+
+                  card.scrollIntoView({ behavior: "smooth", block: "start" });
             } else {
                 console.log("else");
                 open = false;
