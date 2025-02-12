@@ -157,7 +157,19 @@
           </div>
           <div class="info">
             <h1>Arduino Powered Escape Room</h1>
-            <p> hello my name is megan</p>
+            <p> I led the design and development of an immersive escape room, centered around the theme of the Minoan civilization. 
+              The project required a blend of creativity and technical expertise, as we crafted a storyline and set that tied together 
+              the various puzzles and challenges. I was responsible for not only conceptualizing and coding the four interactive games 
+              within the escape room. 
+              The escape room featured a variety of technological game elements seamlessly integrated into the environment and decorations, 
+              bringing the Minoan theme to life. For the puzzles, I programmed sensors using Arduino in C++ to detect variables such as temperature
+               and water levels, creating a dynamic and responsive environment. We integrated live feedback buttons to provide players with real-time 
+               interactions, enhancing the immersion. Additionally, I used CAD modeling and 3D printing techniques to design and construct custom game 
+               pieces and props, ensuring they were both functional and aligned with the Minoan theme.
+              The room’s control systems were powered by Raspberry Pi and Arduino boards, with displays for time tracking 
+              and audio feedback to guide players throughout their journey. The combination of hardware, software, and design elements 
+              made this project a unique challenge, and I took pride in bringing everything together into a cohesive and engaging experience. This hands-on project not only strengthened my skills in CAD modeling, Arduino programming, and interactive design but also allowed me to develop my teamwork abilities as we coordinated our unique skills to make this come to life. 
+              </p>
             <span class="exit">x</span>
           </div>
         </div>
@@ -207,12 +219,17 @@
     <div class="info-card identity">
       <div class = "begin">
         <i class="fa fa-angle-double-down"></i>
-        <h1>The Conversation Fellowship, Strangers in the System: Legality and Labor in Immigrant Experiences</h1>
-        <p>short desc</p>
+        <h1>The Conversation Fellowship, "Strangers in the System: Legality and Labor in Immigrant Experiences"</h1>
+        <p>This project was part of a fellowship with the University of New Mexico School of Law and Tougaloo College. The project
+          explores the intersection of race, immigration status, and labor by investigating how legal
+           classifications of immigrants as "legal" or "illegal" and how this affects their social and economic
+            positioning. It looks at how these labels influence immigrant experiences within the workforce, their social mobility,
+             and how these classifications shape their perceived productivity and worth.</p>
         </div>
       <div class="info">
         <h1>Strangers in the System: Legality and Labor in Immigrant Experiences</h1>
-        <p> hello my name is megan</p>
+        <p> Strangers in the System critically examines the racialized dynamics of immigration, focusing on the intersections of legal status and class in shaping immigrant experiences. The project investigates how the categorization of individuals as "legal" or "illegal" immigrants plays a pivotal role in framing societal perceptions of race, labor, and productivity. By analyzing both legal discourse and everyday language, the research highlights the role of racialized narratives in shaping the social, economic, and political outcomes of immigrants, with a particular focus on their access to labor markets, economic stability, and social rights. This project offers a deeper understanding of how legal and racial boundaries contribute to the marginalization and exploitation of immigrant populations, shedding light on the complex ways that class, productivity, and language intersect to define who belongs and who does not in society.
+        </p>
         <span class="exit">x</span>
       </div>
     </div>
@@ -226,7 +243,9 @@
       </div>
     <div class="info">
       <h1>Whimsi GrownYoung</h1>
-      <p> hello my name is megan</p>
+      <p> This project reimagines the classic children's book format to explore adult challenges like workplace anxiety, imposter syndrome, burnout, friendships, and modern dating. Each book blends playful storytelling
+        with real-world struggles—turning the chaos of adulthood into digestible, illustrated narratives. The project uses AI-generated illustrations and a collaboratively written narrative shaped by idea submissions from students on campus,
+        the series creates a unique, engaging way to reflect on life’s messier moments with humor and honesty.</p>
       <span class="exit">x</span>
     </div>
   </div>
@@ -235,11 +254,37 @@
     <div class = "begin">
       <i class="fa fa-angle-double-down"></i>
       <h1>Restaurant Operations Simulation</h1>
-      <p>short desc</p>
+      <p> Designed and implemented a simulation model of a sit-down restaurant 
+        to analyze operational efficiency.
+        The model integrates customer flow, table management, and a priority driven kitchen
+        queue to optimize service time and maximize customer satisfaction. 
+        The project explores the impact of restaurant layout, staffing, and kitchen processes on 
+        business performance by simulating real-world constraints and operational bottlenecks.
+      </p>
       </div>
     <div class="info">
       <h1>Restaurant Operations Simulation</h1>
-      <p> hello my name is megan</p>
+      <p> This project models the complex flow of a sit-down restaurant, 
+        simulating customer seating, order processing, and kitchen queue management.
+         The goal of this project was to optimize restaurant operations by analyzing 
+         factors such as table assignment, order prioritization, and staff efficiency. 
+         The model simulated a typical customer experience from arrival to order fulfillment
+          as well as a back of house model dictates staff allocation and a priority queue for
+           the kitchen. This model was created using the programming language Forge.  
+           Making good abstraction choices to balance efficiency while still feeling realistic. 
+           Forge (like Alloy) doesn’t have a native queue data structure or explicit time progression,
+            so we need to simulate priority order using relations and constraints. 
+            Since Forge lacks traditional looping constructs, we can model a priority 
+            queue in a relational and staged manner, leveraging ordering constraints by
+             assigning each dish a priority value. These dishes were inserted into the
+              queue using a doubly linked list. Since Forge is relation-based rather than
+               imperative, the linked lists model used binary relations instead of pointers. 
+               Each customer was seated based on party size and table availability (no wait time
+                estimates were modeled). Each order was randomized based on a simple menu with four dishes. Unfortunately the model was not able to simulate sequential cooking. Since Forge doesn’t have traditional multithreading or explicit concurrency control,
+                 the model did not simulate sequential cooking. In the future this could be handled by assigning a dish to one station at a time where multiple stations allow for simultaneous cooking. The biggest challenge in this model was accurately 
+                 tracking orders to the right customers and tables once they entered the kitchen, especially with the stage-by-stage setup and the constant turnover of tables. Instead of continuous time, the sequence of discrete stages were used to represent key events in the restaurant flow. 
+
+      </p>
       <span class="exit">x</span>
     </div>
   </div>
@@ -248,11 +293,22 @@
     <div class = "begin">
       <i class="fa fa-angle-double-down"></i>
       <h1>API Bias & Consistency Analysis</h1>
-      <p>short desc</p>
+      <p>This project analyzed the consistency and potential biases of two candidate 
+        evaluation APIs. It examined factors such as resume scores, demographic attributes, 
+        and how different datasets influenced evaluation results through a series of controlled 
+        tests. The project used statistical and regression analyses, 
+        aiming to highlight potential disparities in automated hiring tools.</p>
       </div>
     <div class="info">
       <h1>API Bias & Consistency Analysis</h1>
-      <p> hello my name is megan</p>
+      <p> This project examines the consistency and potential biases in two resume evaluation
+         APIs: Resume Scorer and Candidate Evaluator. By running controlled experiments with structured datasets,
+          the analyses investigate how different candidate attributes—such as gender, ethnicity, disability, veteran
+           status, and work authorization—impact API scoring. Some of the key tests included evaluating API stability 
+           by repeatedly submitting the same resumes, analyzing score variations across different candidate profiles, 
+           testing for biases by systematically altering protected attributes and applying regression models and decision
+          trees to identify influential factors in scoring.
+      </p>
       <span class="exit">x</span>
     </div>
   </div>
@@ -262,32 +318,9 @@
 
       
 
-     <!--  <div class="project-item data-science database-managment">
-        <h3>Cancer Tech-Networks</h3>
-        <p><strong>January 2018 - January 2020</strong></p>
-        <p class="short-desc">Created graphical networks of genes and proteins associated with Breast cancer using a clustering algorithm to analyze relationships between diagnosis, recovery, and mortality rates.</p>
-        <button class="see-more-btn">See More</button>
-        <div class="full-desc" style="display: none;">
-          <h4>Details:</h4>
-          <p>Placing 3rd in the Texas State Science Fair, this project utilized a clustering algorithm...</p>
-          <img src="science.JPG" alt="Cancer Tech Networks Image">
-          <p>Click here to view more visuals from the project.</p>
-        </div>
-      </div> -->
+
   
-      <!-- Project 2 - Edgar Allan Poe Poetry Generator -->
-     <!--  <div class="project-item machine-learning">
-        <h3>Edgar Allen Poe Poetry Generator</h3>
-        <p><strong>August 2020 - May 2024</strong></p>
-        <p class ="short-desc">Developed an Edgar Allan Poe-style poetry generator using GPT-2 language model with 117 million parameters and custom layers to generate outputs in Poe’s unique style.</p>
-        <button class="see-more-btn">See More</button>
-        <div class="full-desc" style="display: none;">
-          <h4>Details:</h4>
-          <p>Placing 3rd in the Texas State Science Fair, this project utilized a clustering algorithm...</p>
-          <img src="science.JPG" alt="Cancer Tech Networks Image">
-          <p>Click here to view more visuals from the project.</p>
-        </div>
-      </div> -->
+     
   
       <!-- Project 3 - Affirmative Action Study -->
       <!-- <div class="project-item data-science">
