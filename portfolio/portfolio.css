@@ -3,7 +3,7 @@ body {
     font-family: 'Poppins', sans-serif;
     background-color: #f8f9fa;
     margin: 0;
-    padding: 0;
+    padding: 10;
     background-image: repeating-linear-gradient(to top, #12314c, #44b1e4, #b6d8f6); /* Gradient from dark blue to light blue */
     background-attachment: fixed;
     
