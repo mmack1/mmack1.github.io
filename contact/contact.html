@@ -114,12 +114,22 @@
               const form = document.querySelector("#form");
               const submitButton = document.querySelector("#submit");
               const waveImage = document.querySelector(".wave-image"); 
+              const emailInput = document.querySelector("#email");
               const scriptURL =
                 "https://script.google.com/macros/s/AKfycbxeq8sKUgQ7L47Ac6mdaqAmDlhIg-SHmY3KLogkPkEuFkAlaQVsfZW_BIxUVde-U3SUdg/exec";
 
               form.addEventListener("submit", (e) => {
-                submitButton.disabled = true;
                 e.preventDefault();
+                
+                const email = emailInput.value.trim();
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(email)) {
+                  alert("Please enter a valid email address.");
+                  return;
+                }
+                
+                submitButton.disabled = true;
+                
                 let requestBody = new FormData(form);
                 fetch(scriptURL, { method: "POST", body: requestBody })
                   .then((response) => {
