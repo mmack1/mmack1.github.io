@@ -254,8 +254,8 @@ body {
   }
   
   .info-card.full {
-    width: 95%;
-    margin-left: 20px;
+    width: 90%;
+    justify-self: center;
     height: auto;
     position: absolute;
     transition: 0.3s;
